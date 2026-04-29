@@ -1,18 +1,22 @@
-# Nome do projeto
+# PSYCHE
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O "Psyche" veio através da necessidade de unir estudantes de psicologia com o intuito de aprofundarem na área de estudo, com as pessoas em situação de vulnerabilidade social, que necessitam de atendimento psicológico. Esse projeto é referente às ODS's 3 (Saúde e bem-estar), 4 (Educação de qualidade) e 10 (Redução das desigualdades).
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Pedro Henrique Nascimento Cézar
+* Victor Corradi Jamal  
+* Matheus Ribeiro Paixão 
+* Arthur Moreira Figueiredo
+* João Vitor Portes Rocha Soares    
+* Lucas Gonçalves Pimenta Silva
+* Vitor Augusto de Souza
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Diego Augusto de Faria Barros 
+* Henrique Almeida Louzada
+* Lucca Soares de Paiva Lacerda
 
 
 
