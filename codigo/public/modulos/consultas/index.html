@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSYCHE – Lista de Consultas</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+
+  <script src="../../assets/js/login.js"></script>
+
+  <link rel="stylesheet" href="consultas.css" />
+</head>
+<body>
+
+ 
+  <div class="layout">
+
+    <!-- ─── SIDEBAR ─── -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-dot">P</div>
+        <span class="logo-text">PSYCHE</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="../../index.html" class="nav-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M3 4h14v2H3zm0 5h14v2H3zm0 5h9v2H3z"/></svg>
+          Dashboard
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a5 5 0 1 1 0 10A5 5 0 0 1 10 2zm0 12c-5 0-8 2.5-8 4v1h16v-1c0-1.5-3-4-8-4z"/></svg>
+          Meus Pacientes
+        </a>
+        <a href="index.html" class="nav-item active">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M6 2h8a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm1 4v2h6V6H7zm0 4v2h6v-2H7zm0 4v2h4v-2H7z"/></svg>
+          Consultas
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M3 3h14v14H3zm2 2v10h10V5H5zm1.5 2h7v1.5h-7zm0 3h7v1.5h-7zm0 3h5v1.5h-5z"/></svg>
+          Agendamentos
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 1 1 0 16A8 8 0 0 1 10 2zm.75 5.25h-1.5v4l3.5 2 .75-1.3-2.75-1.6V7.25z"/></svg>
+          Configurações
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="avatar-circle" id="sidebarAvatar">--</div>
+        <span class="sidebar-username" id="sidebarName">Carregando...</span>
+      </div>
+    </aside>
+
+    <!-- ─── MAIN ─── -->
+    <div class="main-content">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <!-- Hamburger (mobile) -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <h1 class="topbar-title">Lista de Consultas</h1>
+
+        <div class="topbar-right">
+          <span class="topbar-greeting" id="topbarGreeting">Bem-vindo!</span>
+          <button class="btn-logout" onclick="logoutUser()">Sair</button>
+        </div>
+      </header>
+
+      <!-- CONTEÚDO -->
+      <main class="content">
+
+        <!-- CARDS DE RESUMO -->
+        <section class="summary-grid" id="summaryGrid">
+          <div class="sum-card">
+            <p class="sum-label">Total de Consultas</p>
+            <p class="sum-value" id="totalConsultas">--</p>
+            <p class="sum-sub">Todas as consultas</p>
+          </div>
+          <div class="sum-card yellow">
+            <p class="sum-label">Pendentes</p>
+            <p class="sum-value" id="totalPendentes">--</p>
+            <p class="sum-sub">Aguardando confirmação</p>
+          </div>
+          <div class="sum-card">
+            <p class="sum-label">Confirmadas</p>
+            <p class="sum-value" id="totalConfirmadas">--</p>
+            <p class="sum-sub">Agendadas</p>
+          </div>
+          <div class="sum-card">
+            <p class="sum-label">Concluídas</p>
+            <p class="sum-value" id="totalConcluidas">--</p>
+            <p class="sum-sub">Este mês</p>
+          </div>
+        </section>
+
+        <!-- BARRA DE FILTROS -->
+        <section class="filters-bar">
+          <div class="search-wrap">
+            <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="8.5" cy="8.5" r="5.5"/><path d="M13.5 13.5L18 18"/>
+            </svg>
+            <input
+              type="text"
+              id="searchInput"
+              class="search-input"
+              placeholder="Buscar paciente ou estagiário..."
+              oninput="aplicarFiltros()"
+            />
+          </div>
+
+          <select id="filterStatus" class="filter-select" onchange="aplicarFiltros()">
+            <option value="">Status: Todos</option>
+            <option value="confirmado">Confirmado</option>
+            <option value="pendente">Pendente</option>
+            <option value="cancelado">Cancelado</option>
+            <option value="concluido">Concluído</option>
+          </select>
+
+          <select id="filterLocal" class="filter-select" onchange="aplicarFiltros()">
+            <option value="">Local: Todos</option>
+          </select>
+
+          <button class="btn-primary" onclick="abrirModalNova()">+ Nova Consulta</button>
+        </section>
+
+        <!-- TABELA DE CONSULTAS -->
+        <section class="table-section">
+          <div class="table-wrap">
+            <table class="consultas-table" id="consultasTable">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Paciente</th>
+                  <th>Estagiário</th>
+                  <th>Data / Hora</th>
+                  <th>Local</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="consultasBody">
+                <tr>
+                  <td colspan="7" class="loading-row">Carregando consultas...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- PAGINAÇÃO -->
+          <div class="pagination" id="pagination">
+            <span class="pag-info" id="pagInfo">–</span>
+            <div class="pag-btns" id="pagBtns"></div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       MODAL — NOVA / EDITAR CONSULTA
+  ═══════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="fecharModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">Nova Consulta</h2>
+        <button class="modal-close" onclick="fecharModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="modalId" />
+
+        <div class="form-group">
+          <label>Paciente</label>
+          <input type="text" id="modalPaciente" placeholder="Nome do paciente" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Idade</label>
+            <input type="number" id="modalIdade" placeholder="Idade" min="0" max="120" />
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select id="modalStatus">
+              <option value="pendente">Pendente</option>
+              <option value="confirmado">Confirmado</option>
+              <option value="cancelado">Cancelado</option>
+              <option value="concluido">Concluído</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Estagiário</label>
+          <input type="text" id="modalEstagiario" placeholder="Nome do estagiário" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Data e Hora</label>
+            <input type="datetime-local" id="modalDataHora" />
+          </div>
+          <div class="form-group">
+            <label>Modalidade</label>
+            <select id="modalModalidade">
+              <option value="presencial">Presencial</option>
+              <option value="remoto">Remoto</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Local</label>
+          <input type="text" id="modalLocal" placeholder="Local do atendimento" />
+        </div>
+        <div class="form-group">
+          <label>Notas</label>
+          <textarea id="modalNotas" rows="3" placeholder="Observações sobre a consulta..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="fecharModal()">Cancelar</button>
+        <button class="btn-primary" onclick="salvarConsulta()">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Overlay sidebar mobile -->
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="fecharSidebar()"></div>
+
+  <script src="consultas.js"></script>
+</body>
+</html>
