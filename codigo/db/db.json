@@ -21,5 +21,20 @@
       "email": "rommel@gmail.com",
       "id": 3
     }
+  ],
+  "consultas": [
+    {
+      "id": 1,
+      "paciente": "Ana Souza",
+      "idade": 32,
+      "estagiario": "Arthur Moreira Figueiredo",
+      "data_hora": "2024-04-24T11:00",
+      "local": "Biblioteca Comunitária",
+      "status": "confirmado",
+      "modalidade": "presencial"
+    }
   ]
 }
+
+
+  
