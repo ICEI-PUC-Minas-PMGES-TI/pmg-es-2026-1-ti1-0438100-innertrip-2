@@ -2,109 +2,40 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PSYCHE – Cadastro de Paciente</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
-
-  <!-- Arquivo CSS externo -->
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psyche | Cadastro</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="page">
+    <section class="left-panel">
+      <header class="brand">
+        <div class="brand-icon"></div>
+        <h1>PSYCHE</h1>
+      </header>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="sidebar-logo">PSYCHE</div>
-    <nav>
-      <div class="nav-item active">Dashboard</div>
-      <div class="nav-item">Pacientes</div>
-      <div class="nav-item">Agendamentos</div>
-      <div class="nav-item">Configurações</div>
-    </nav>
-  </aside>
-
-  <!-- CONTEÚDO PRINCIPAL -->
-  <main class="main">
-    <div class="card">
-      <h1>Cadastro de Paciente</h1>
-
-      <!-- Nome completo -->
-      <div class="form-group">
-        <label for="nome">Nome completo</label>
-        <input type="text" id="nome" />
+      <div class="login-box">
+        <h2>BEM-VINDO DE VOLTA!</h2>
+        <p>Para continuar conectado conosco,<br> faça login com suas informações pessoais</p>
+        <button type="button" id="btnEntrar" class="btn btn-outline">ENTRAR</button>
       </div>
+    </section>
 
-      <!-- Data de nascimento + CPF -->
-      <div class="form-row two">
-        <div class="form-group" style="margin-bottom:0">
-          <label for="nascimento">Data de nascimento</label>
-          <input type="date" id="nascimento" />
-        </div>
-        <div class="form-group" style="margin-bottom:0">
-          <label for="cpf">CPF</label>
-          <input type="text" id="cpf" placeholder="000.000.000-00" />
-        </div>
-      </div>
+    <section class="right-panel">
+      <form class="signup-card" id="formCadastro">
+        <h2>CRIAR CONTA</h2>
+        <p>Use seu e-mail de estudante para se cadastrar:</p>
 
-      <!-- Email -->
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" />
-      </div>
+        <input type="text" id="nome" placeholder="Nome completo" autocomplete="name" required />
+        <input type="email" id="email" placeholder="E-mail" autocomplete="email" required />
+        <input type="password" id="senha" placeholder="Senha" autocomplete="new-password" required />
 
-      <!-- Telefone + Gênero -->
-      <div class="form-row small">
-        <div class="form-group" style="margin-bottom:0">
-          <label for="telefone">Telefone</label>
-          <input type="text" id="telefone" placeholder="(00) 00000-0000" />
-        </div>
-        <div class="form-group" style="margin-bottom:0">
-          <label for="genero">Gênero</label>
-          <select id="genero">
-            <option value="">—</option>
-            <option>Masculino</option>
-            <option>Feminino</option>
-            <option>Outro</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Endereço -->
-      <div class="form-group">
-        <label for="endereco">Endereço</label>
-        <input type="text" id="endereco" />
-      </div>
-
-      <!-- Status -->
-      <div class="status-group">
-        <label>Status</label>
-        <div class="radio-row">
-          <label class="radio-label">
-            <input type="radio" name="status" value="ativo" checked />
-            Ativo
-          </label>
-          <label class="radio-label">
-            <input type="radio" name="status" value="inativo" />
-            Inativo
-          </label>
-        </div>
-      </div>
-
-      <!-- Observações -->
-      <div class="form-group">
-        <label for="obs">Observações</label>
-        <textarea id="obs"></textarea>
-      </div>
-
-      <!-- Botões -->
-      <div class="btn-row">
-        <button class="btn btn-cancel">Cancelar</button>
-        <button class="btn btn-save">Salvar</button>
-      </div>
-
-    </div>
+        <button type="submit" class="btn btn-dark">CADASTRAR</button>
+        <span id="mensagem" class="mensagem"></span>
+      </form>
+    </section>
   </main>
 
+  <script src="script.js"></script>
 </body>
 </html>
