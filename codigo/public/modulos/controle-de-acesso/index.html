@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psyche | Cadastro</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS próprio -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container-fluid min-vh-100 p-0">
+    <div class="row g-0 min-vh-100 page-layout">
+      <section class="col-12 col-lg-5 left-panel position-relative d-flex flex-column">
+        <header class="brand d-flex align-items-center">
+          <div class="brand-icon"></div>
+          <h1 class="m-0">PSYCHE</h1>
+        </header>
+
+        <div class="login-box text-center mx-auto">
+          <h2>BEM-VINDO DE VOLTA!</h2>
+          <p>Para continuar conectado conosco,<br class="d-none d-sm-block"> faça login com suas informações pessoais</p>
+          <button type="button" id="btnEntrar" class="btn btn-outline-psyche">ENTRAR</button>
+        </div>
+      </section>
+
+      <section class="col-12 col-lg-7 right-panel d-flex align-items-center justify-content-center">
+        <form class="signup-card text-center" id="formCadastro">
+          <h2>CRIAR CONTA</h2>
+          <p>Use seu e-mail de estudante para se cadastrar:</p>
+
+          <input class="form-control psyche-input" type="text" id="nome" placeholder="Nome completo" autocomplete="name" required />
+          <input class="form-control psyche-input" type="email" id="email" placeholder="E-mail" autocomplete="email" required />
+          <input class="form-control psyche-input" type="password" id="senha" placeholder="Senha" autocomplete="new-password" required />
+
+          <button type="submit" class="btn btn-dark-psyche">CADASTRAR</button>
+          <span id="mensagem" class="mensagem"></span>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript próprio -->
+  <script src="script.js"></script>
+</body>
+</html>

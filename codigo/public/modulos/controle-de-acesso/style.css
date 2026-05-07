@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --preto: #111111;
+  --amarelo: #ffd10a;
+  --cinza-input: #d5d5d5;
+  --cinza-texto: #6d6d6d;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--preto);
+  color: var(--preto);
+}
+
+.left-panel {
+  min-height: 100vh;
+  background: var(--preto);
+  color: #ffffff;
+  padding: 30px 0 0 21px;
+}
+
+.right-panel {
+  min-height: 100vh;
+  background: var(--amarelo);
+}
+
+.brand {
+  gap: 14px;
+}
+
+.brand-icon {
+  width: clamp(42px, 4vw, 49px);
+  height: clamp(42px, 4vw, 49px);
+  border-radius: 50%;
+  background: var(--amarelo);
+  flex-shrink: 0;
+}
+
+.brand h1 {
+  font-size: clamp(22px, 2vw, 25px);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.login-box {
+  width: 100%;
+  margin-top: clamp(140px, 31vh, 337px);
+  padding: 0 20px;
+}
+
+.login-box h2 {
+  color: var(--amarelo);
+  font-size: clamp(31px, 3.2vw, 39px);
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.login-box p {
+  color: var(--cinza-texto);
+  font-size: clamp(18px, 2.1vw, 25px);
+  line-height: 1.25;
+  margin-bottom: clamp(48px, 8vw, 103px);
+}
+
+.signup-card {
+  width: min(430px, 90%);
+  margin-top: -35px;
+}
+
+.signup-card h2 {
+  font-size: clamp(32px, 3.5vw, 42px);
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: clamp(24px, 3vw, 37px);
+}
+
+.signup-card p {
+  font-size: clamp(18px, 2vw, 25px);
+  margin-bottom: clamp(42px, 5.5vw, 70px);
+}
+
+.psyche-input {
+  width: min(404px, 100%);
+  height: clamp(56px, 5.5vw, 65px);
+  margin: 0 auto 13px;
+  border: 1px solid #9d9d9d;
+  border-radius: 31px;
+  background: var(--cinza-input);
+  padding: 0 23px;
+  font-size: clamp(18px, 2vw, 25px);
+  color: var(--preto);
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.psyche-input:focus {
+  background: var(--cinza-input);
+  border-color: #777777;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.18), 0 0 0 0.15rem rgba(17, 17, 17, 0.15);
+}
+
+.psyche-input::placeholder {
+  color: #777777;
+}
+
+.btn-outline-psyche,
+.btn-dark-psyche {
+  width: min(257px, 80%);
+  height: clamp(54px, 5vw, 61px);
+  border-radius: 31px;
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 900;
+  transition: 0.2s;
+}
+
+.btn-outline-psyche {
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255, 209, 10, 0.75);
+}
+
+.btn-outline-psyche:hover {
+  color: #ffffff;
+  border-color: var(--amarelo);
+  transform: scale(1.02);
+}
+
+.btn-dark-psyche {
+  color: var(--amarelo);
+  background: #141414;
+  border: none;
+  margin-top: 36px;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.35);
+}
+
+.btn-dark-psyche:hover {
+  color: var(--amarelo);
+  background: #141414;
+  transform: scale(1.02);
+}
+
+.mensagem {
+  display: block;
+  min-height: 20px;
+  margin-top: 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 991.98px) {
+  .left-panel,
+  .right-panel {
+    min-height: 50vh;
+  }
+
+  .left-panel {
+    padding: 24px 18px 60px;
+  }
+
+  .login-box {
+    margin-top: 90px;
+  }
+
+  .right-panel {
+    padding: 70px 20px;
+  }
+
+  .signup-card {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .left-panel,
+  .right-panel {
+    min-height: auto;
+  }
+
+  .left-panel {
+    padding-bottom: 55px;
+  }
+
+  .login-box {
+    margin-top: 70px;
+  }
+
+  .login-box p {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .right-panel {
+    padding: 60px 18px;
+  }
+}
