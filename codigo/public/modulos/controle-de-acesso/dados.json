@@ -1,0 +1,17 @@
+{
+  "site": "PSYCHE",
+  "pagina": "Criar conta",
+  "framework": "Bootstrap 5",
+  "responsivo": true,
+  "campos": [
+    "Nome completo",
+    "E-mail",
+    "Senha"
+  ],
+  "mensagens": {
+    "sucesso": "Cadastro realizado com sucesso!",
+    "erroCampos": "Preencha todos os campos.",
+    "erroEmail": "Digite um e-mail válido.",
+    "login": "Área de login ainda não configurada."
+  }
+}
