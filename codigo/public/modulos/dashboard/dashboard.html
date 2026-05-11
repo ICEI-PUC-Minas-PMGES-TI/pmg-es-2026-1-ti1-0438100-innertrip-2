@@ -1,13 +1,173 @@
 <!DOCTYPE html>
 <html lang='pt-BR'>
+
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>PSYCHE – Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel='stylesheet' href='dashboard.css'>
     <script src="dashboard.js"></script>
 </head>
-<body>
-    
+
+<body>  
+    <!-- ─── SIDEBAR ─── -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-dot">P</div>
+            <span class="logo-text">PSYCHE</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="../../index.html" class="nav-item active">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M3 4h14v2H3zm0 5h14v2H3zm0 5h9v2H3z" />
+                </svg>
+                Dashboard
+            </a>
+            <a href="#" class="nav-item">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2a5 5 0 1 1 0 10A5 5 0 0 1 10 2zm0 12c-5 0-8 2.5-8 4v1h16v-1c0-1.5-3-4-8-4z" />
+                </svg>
+                Meus Pacientes
+            </a>
+            <a href="index.html" class="nav-item">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                        d="M6 2h8a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm1 4v2h6V6H7zm0 4v2h6v-2H7zm0 4v2h4v-2H7z" />
+                </svg>
+                Consultas
+            </a>
+            <a href="#" class="nav-item">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M3 3h14v14H3zm2 2v10h10V5H5zm1.5 2h7v1.5h-7zm0 3h7v1.5h-7zm0 3h5v1.5h-5z" />
+                </svg>
+                Agendamentos
+            </a>
+            <a href="#" class="nav-item">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2a8 8 0 1 1 0 16A8 8 0 0 1 10 2zm.75 5.25h-1.5v4l3.5 2 .75-1.3-2.75-1.6V7.25z" />
+                </svg>
+                Configurações
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="avatar-circle" id="sidebarAvatar">--</div>
+            <span class="sidebar-username" id="sidebarName">Carregando...</span>
+        </div>
+    </aside>
+
+    <!--Main-->
+    <main>
+        <!--Header-->
+        <header>
+            <div id="headContent">
+                <h2>Dashboard</h2>
+                <p>Veja aqui as informações e estatisticas do seu trabalho no Psyche</p>
+            </div>
+            <div id="headBtns">
+                <div class="avatar-circle" id="sidebarAvatar">--</div>
+            </div>
+        </header>
+
+        <!--Section---SmallCards-->
+        <section>
+            <div id="titleSection">
+                <h1>Bem vindo, User!</h1>
+                <p>Você trabalhou 50 horas essa semana e conquistou 3 novos pacientes.</p>                
+            </div>
+            <div id="smallCards">
+                <div class="cardsSm">
+                    <p>Total de Pacientes</p>
+                    <h1>0</h1>
+                </div>
+                <div class="cardsSm">
+                    <p>Total de Horas trabalhadas</p>
+                    <h1>0</h1>
+                </div>
+                <div class="cardsSm">
+                    <p>Visitas no seu Perfil</p>
+                    <h1>0</h1>
+                </div>
+                <div class="cardsSm">
+                    <p>Solicitações</p>
+                    <h1>0</h1>
+                </div>
+            </div>
+        </section>
+
+        <!--Article-->
+        <article>
+            <!--Grafico de Barras-->
+            <div class="cardsArt cardN" id="barChart">
+                <div id="titleChart">
+                    <h2>Horas Trabalhadas</h2>
+                    <div id="btnChart">
+                        <div class="selectRange">Ano</div>
+                        <div class="selectRange">Mes</div>
+                        <div class="selectRange">Semana</div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--Conquista de Pacientes-->
+            <div class="cardsArt cardN" id="conquista">
+                <h2 id="conTitle">Conquista de pacientes</h2>
+                <div id="inConq">
+                    <div class="conMes conPlus"><p>Janeiro</p><h2>+3 pacientes</h2></div>
+                    <div class="conMes conMinus"><p>Fevereiro</p><h2>-1 pacientes</h2></div>
+                    <div class="conMes"><p>Marco</p><h2>0 pacientes</h2></div>
+                    <div class="conMes"><p>Abril</p><h2>0 pacientes</h2></div>
+                    <div class="conMes"><p>Maio</p><h2>0 pacientes</h2></div>
+                    <div class="conMes"><p>Junho</p><h2>0 pacientes</h2></div>
+                </div>    
+            </div>
+
+            <!--Avaliacoes dos pacientes-->
+            <div class="cardsArt" id="avaliacao">
+                <div id="avalTitle">
+                    <h1>Avaliacoes recentes:</h1>
+                    <p>Últimas avaliações feitas sobre o seu perfil</p>
+                </div>
+                <div id="cardsAval">
+                    <div class="cardsAvaliacao">
+                        <div class="avatar-circle avatarAval" id="sidebarAvatar">--</div>
+                        <div>
+                            <h1>Nome paciente</h1>
+                            <p>Ótimo profissional, me ajudou muito no meu tratamento de ansiedade.</p>
+                        </div>
+                    </div>
+                    <div class="cardsAvaliacao">
+                        <div class="avatar-circle avatarAval" id="sidebarAvatar">--</div>
+                        <div>
+                            <h1>Nome paciente</h1>
+                            <p>Ótimo profissional, me ajudou muito no meu tratamento de ansiedade.</p>
+                        </div>
+                    </div>
+                    <div class="cardsAvaliacao">
+                        <div class="avatar-circle avatarAval" id="sidebarAvatar">--</div>
+                        <div>
+                            <h1>Nome paciente</h1>
+                            <p>Ótimo profissional, me ajudou muito no meu tratamento de ansiedade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Resultado das consultas-->
+            <div class="cardsArt cardN" id="resultado">
+                <h2 id="resTitle">Resultado das Consultas</h2>
+                <div id="inRes">
+                    <div class="resultadosC"><h2>3 casos resolvidos</h2></div>
+                    <div class="resultadosC"><h2>3 casos encaminhados</h2></div>
+                    <div class="resultadosC"><h2>3 casos em andamento</h2></div>
+                </div>
+            </div>
+
+        </article>
+    </main>
 </body>
 </html>
