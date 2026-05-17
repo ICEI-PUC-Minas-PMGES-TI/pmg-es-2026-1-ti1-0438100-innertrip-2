@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Psyche - Configurações</title>
+  <link rel="stylesheet" href="telacadastros.css">
+</head>
+
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <h1>Psyche</h1>
+      <p>Saúde mental online</p>
+    </div>
+
+    <div class="sidebar-section">Menu</div>
+    <div class="sidebar-item"><span class="sidebar-icon"></span> Início</div>
+    <div class="sidebar-item"><span class="sidebar-icon"></span> Minhas sessões</div>
+    <div class="sidebar-item"><span class="sidebar-icon"></span> Pacientes</div>
+    <div class="sidebar-item"><span class="sidebar-icon"></span> Dashboard</div>
+
+    <div class="sidebar-section">Conta</div>
+    <div class="sidebar-item"><span class="sidebar-icon"></span> Perfil</div>
+    <div class="sidebar-item active"><span class="sidebar-icon"></span> Configurações</div>
+
+    <div class="sidebar-footer">
+      <div class="avatar-sm">JS</div>
+      <div class="sidebar-footer-info">
+        <strong>José Silva</strong>
+        <span>Aluno</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="topbar-title">
+        <h2>Configuração de conta do aluno/psicólogo</h2>
+        <p>Edite, adicione ou exclua informações da sua conta</p>
+      </div>
+      <div class="topbar-actions">
+        <div class="topbar-icon">🔔</div>
+        <div class="topbar-icon">💬</div>
+        <div class="avatar-md">JS</div>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- PERFIL PÚBLICO -->
+      <div class="section-header">
+        <h3>Perfil Público</h3>
+        <p>informações do seu perfil disponíveis ao público</p>
+      </div>
+      <hr class="divider"/>
+
+      <div class="profile-grid">
+        <div class="form-fields">
+
+          <div class="field-group">
+            <label>Nome</label>
+            <input type="text" value="José Silva"/>
+          </div>
+
+          <div class="field-group">
+            <label>E-mail</label>
+            <input type="email" value="123456@aluno.inst.com.br"/>
+          </div>
+
+          <div class="field-group">
+            <label>Bio</label>
+            <textarea placeholder="Um pouco sobre você"></textarea>
+          </div>
+
+          <!-- dois campos extras que aparecem na imagem abaixo da bio -->
+          <div class="field-group">
+            <label>E-mail</label>
+            <input type="email" value="123456@aluno.inst.com.br"/>
+          </div>
+
+          <div class="field-group">
+            <label>E-mail</label>
+            <input type="email" value="123456@aluno.inst.com.br"/>
+          </div>
+
+        </div>
+
+        <div class="photo-card">
+          <p class="photo-title">Foto de perfil</p>
+          <div class="photo-circle"></div>
+          <div class="photo-actions">
+            <button class="btn-upload">Fazer upload</button>
+            <button class="btn-delete">Excluir</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFORMAÇÕES PRIVADAS -->
+      <div class="section-header" style="margin-top: 40px;">
+        <h3>Informações privadas</h3>
+        <p>informações do seu perfil que só você pode ver</p>
+      </div>
+      <hr class="divider"/>
+
+      <div class="info-box">
+        <label>Digite sua senha para escolher uma nova</label>
+        <input type="password" value="****************"/>
+        <button class="btn-change">Trocar senha</button>
+      </div>
+
+      <hr class="divider"/>
+
+      <!-- DELETAR CONTA -->
+      <div class="section-header" style="margin-top: 40px;">
+        <h3>Deletar conta</h3>
+      </div>
+      <hr class="divider"/>
+
+      <div class="delete-box">
+        <p>Se você deletar, não tem como voltar</p>
+        <button class="btn-danger">Deletar mesmo assim</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="telacadastros.js"></script>
+</body>
+</html>

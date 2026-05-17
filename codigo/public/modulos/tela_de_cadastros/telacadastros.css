@@ -1,0 +1,398 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  height: 100vh;
+  background: #f3f3f3;
+  color: #222;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 235px;
+  min-width: 235px;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  color: #ccc;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-logo {
+  padding: 22px 20px 14px;
+  border-bottom: 1px solid #333;
+}
+
+.sidebar-logo h1 {
+  color: #f5c800;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.sidebar-logo p {
+  color: #888;
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+.sidebar-section {
+  padding: 18px 20px 4px;
+  font-size: 0.68rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.sidebar-item:hover {
+  background: #2a2a2a;
+}
+
+.sidebar-item.active {
+  background: #f5c800;
+  color: #111;
+  font-weight: 600;
+}
+
+.sidebar-icon {
+  width: 18px;
+  height: 18px;
+  background: #444;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.sidebar-item.active .sidebar-icon {
+  background: #c9a200;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 16px 20px;
+  border-top: 1px solid #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-footer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-footer-info strong {
+  font-size: 0.88rem;
+  color: #eee;
+}
+
+.sidebar-footer-info span {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+/* AVATARES */
+
+.avatar-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f5c800;
+  color: #111;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatar-md {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f5c800;
+  color: #111;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* MAIN */
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 235px; /* empurra pra não ficar atrás da sidebar fixa */
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* TOPBAR */
+
+.topbar {
+  background: #fff;
+  padding: 16px 32px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.topbar-title h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.topbar-title p {
+  font-size: 0.78rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-icon {
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #555;
+}
+
+/* CONTENT */
+.content {
+  padding: 32px 40px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* TÍTULOS DE SEÇÃO */
+
+.section-header h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #222;
+}
+
+.section-header p {
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 14px 0 24px;
+}
+
+/* GRID PERFIL PÚBLICO */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* CAMPOS DO FORMULÁRIO */
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field-group label {
+  font-size: 0.85rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.field-group input,
+.field-group textarea {
+  width: 100%;
+  background: #e2e2e2;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 0.88rem;
+  color: #555;
+  font-family: inherit;
+  outline: none;
+}
+
+.field-group textarea {
+  height: 110px;
+  resize: vertical;
+}
+
+/* CARD DE FOTO DE PERFIL */
+.photo-card {
+  background: #e2e2e2;
+  padding: 20px 16px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.photo-title {
+  font-size: 0.85rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.photo-circle {
+  width: 110px;
+  height: 110px;
+  background: #bbb;
+  border-radius: 50%;
+}
+
+.photo-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+/* BOTÕES */
+.btn-upload {
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+  border: 1.5px solid #f5c800;
+  color: #333;
+  font-size: 0.82rem;
+  font-family: inherit;
+}
+
+.btn-upload:hover {
+  background: #fff8cc;
+}
+
+.btn-delete {
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #3a3a3a;
+  border: none;
+  color: #eee;
+  font-size: 0.82rem;
+  font-family: inherit;
+}
+
+.btn-delete:hover {
+  background: #555;
+}
+
+.btn-change {
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #f5c800;
+  border: 1px solid #c9a200;
+  color: #111;
+  font-weight: 600;
+  font-size: 0.85rem;
+  font-family: inherit;
+  margin-top: 10px;
+}
+
+.btn-change:hover {
+  background: #e0b800;
+}
+
+.btn-danger {
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #c0392b;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  font-family: inherit;
+  margin-top: 8px;
+}
+
+.btn-danger:hover {
+  background: #a93226;
+}
+
+/* CAIXA DE SENHA */
+.info-box {
+  background: #fdf9e3;
+  border: 1px solid #e8dfa0;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-box label {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.info-box input[type="password"] {
+  padding: 9px 12px;
+  border: 1.5px solid #6ca0dc;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  background: #fff;
+  outline: none;
+  font-family: inherit;
+  color: #333;
+}
+
+/* CAIXA DE DELETAR */
+.delete-box {
+  background: #fdf9e3;
+  border: 1px solid #e8dfa0;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 520px;
+}
+
+.delete-box p {
+  font-size: 0.88rem;
+  color: #444;
+}
