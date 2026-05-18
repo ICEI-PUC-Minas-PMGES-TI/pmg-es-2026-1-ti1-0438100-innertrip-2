@@ -1,0 +1,52 @@
+{
+  "pacientes": [
+    {
+      "id": "pac-001",
+      "nome": "Ana Paula Ferreira",
+      "nascimento": "1990-03-15",
+      "cpf": "123.456.789-00",
+      "email": "ana.ferreira@email.com",
+      "telefone": "(31) 98765-4321",
+      "genero": "Feminino",
+      "endereco": "Rua das Flores, 142, Bairro Santa Efigênia, Belo Horizonte - MG",
+      "status": "ativo",
+      "observacoes": "Paciente com histórico de ansiedade generalizada. Sessões semanais às terças.",
+      "dataCadastro": "2024-01-10",
+      "ultimaAtualizacao": "2025-04-22"
+    },
+    {
+      "id": "pac-002",
+      "nome": "Carlos Eduardo Lima",
+      "nascimento": "1985-07-28",
+      "cpf": "987.654.321-00",
+      "email": "carlos.lima@email.com",
+      "telefone": "(31) 91234-5678",
+      "genero": "Masculino",
+      "endereco": "Av. do Contorno, 800, Apto 501, Funcionários, Belo Horizonte - MG",
+      "status": "ativo",
+      "observacoes": "Encaminhado por psiquiatra. Em uso de medicação. Sessões quinzenais.",
+      "dataCadastro": "2024-02-05",
+      "ultimaAtualizacao": "2025-05-01"
+    },
+    {
+      "id": "pac-003",
+      "nome": "Beatriz Souza Mendes",
+      "nascimento": "2001-11-03",
+      "cpf": "456.123.789-00",
+      "email": "bia.mendes@email.com",
+      "telefone": "(31) 99876-5432",
+      "genero": "Feminino",
+      "endereco": "Rua Pium-í, 55, Cruzeiro, Belo Horizonte - MG",
+      "status": "inativo",
+      "observacoes": "Alta temporária em fevereiro. Retorno previsto para julho de 2025.",
+      "dataCadastro": "2023-09-18T08:00:00.000Z",
+      "ultimaAtualizacao": "2025-02-10"
+    }
+  ],
+  "meta": {
+    "totalPacientes": 3,
+    "ativos": 2,
+    "inativos": 1,
+    "ultimaAtualizacaoBase": "2025-05-16"
+  }
+}
