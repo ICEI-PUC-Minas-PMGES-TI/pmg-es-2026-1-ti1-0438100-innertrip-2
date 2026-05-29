@@ -2,13 +2,15 @@
 
 Informações básicas do projeto.
 
-* **Projeto:** [NOME DO PROJETO]
-* **Repositório GitHub:** [LINK PARA O REPOSITÓRIO NO GITHUB]
+* **Projeto:** [Innertrip]
+* **Repositório GitHub:** [[LINK PARA O REPOSITÓRIO NO GITHUB](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0438100-innertrip-2/)]
 * **Membros da equipe:**
 
-  * [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  * [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  * [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  * [Vítor Augusto de Souza](https://github.com/Vitor-vas) 
+  * [Arthur Moreira Figueiredo](https://github.com/arthurmoreira-dev)
+  * [João Vitor Portes Rocha Soares](https://github.com/JoaoPortess) 
+  * [Pedro Henrique Nascimento Cézar](https://github.com/pedrohcezar) 
+  * [Lucas Gonçalves Pimenta Silva]() ⚠️ Alterar ⚠️
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -24,11 +26,18 @@ A documentação do projeto é estruturada da seguinte forma:
 
 # Contexto
 
-Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa e público-alvo.
+, o objetivo do nosso projeto é ajudar essas pessoas oferecendo uma plataforma que une principalmente alunos de psicologia
+e essas pessoas, oferecendo um serviço de qualidade e gratuito para as pessoas que precisam e para os alunos iremos oferecer horas complementares necessárias para a formação no curso. 
 
 ## Problema
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+**✳️✳️✳️ O Brasil tem cerca de 152 milhões de pessoas sem plano de saúde. Para a maioria delas, o acesso a
+atendimento psicológico e psiquiátrico é praticamente inexistente: consultas particulares custam entre R$
+150 e R$ 350, filas no SUS podem levar meses, e o estigma social ainda afasta quem mais precisa de
+buscar ajuda.
+Ao mesmo tempo, milhares de estudantes de Psicologia e Medicina precisam cumprir horas de
+estágio supervisionado e têm dificuldade de encontrar contextos reais de prática. Profissionais formados
+que gostariam de fazer trabalho voluntário não têm um canal estruturado para isso.  ✳️✳️✳️**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -42,7 +51,12 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Objetivos
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+**✳️✳️✳️ Mente Acessível é uma plataforma web que conecta, de forma direta e segura, pessoas sem acesso a
+saúde mental a estudantes e profissionais dispostos a atender gratuitamente ou a preço social — tudo
+online, sem deslocamento e sem custo para o usuário.
+A proposta resolve três problemas simultaneamente: a pessoa vulnerável recebe atendimento real e
+qualificado; o estudante ganha prática supervisionada e horas complementares; e a instituição (faculdade
+ou ONG) organiza e valida tudo dentro da própria plataforma. ✳️✳️✳️**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -68,7 +82,12 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 ## Público-Alvo
 
-**✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+**✳️✳️✳️ 
+Pessoa Vulnerável: Usuário principal. Qualquer pessoa sem acesso a plano de saúde que precise de apoio psicológico ou psiquiátrico.
+Estudante:Estudante de Psicologia ou Medicina em período de estágio supervisionado.
+Profissional Voluntário: Psicólogo ou psiquiatra formado que oferece horários voluntários ou a preço social.
+Instituição: Faculdades, ONGs ou CAPS que supervisionam estudantes e organizam a oferta de atendimentos.
+ ✳️✳️✳️**
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -84,6 +103,8 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 ## Etapa de Entendimento
 
 **✳️✳️✳️ APRESENTE OS ARTEFATOS DA ETAPA  ✳️✳️✳️**
+![Mapa de Stakeholders](images/MapaStakeHolders.png)
+![Matriz de alinhamento: Saúde mental](images/MatrizAlinhamento.png)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -100,7 +121,9 @@ Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa
 
 **✳️✳️✳️ APRESENTE OS DIAGRAMAS DE PERSONAS ✳️✳️✳️**
 
-![Exemplo de proposta de valor](images/exemplo-persona.png)
+![Persona Lucas](images/Persona-Lucas.png)
+![Persona Mariana](images/Persona-Mariana.png)
+![Persona Ricardo](images/Persona-Ricardo.png)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -121,10 +144,14 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-| EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`        | PARA ...`MOTIVO/VALOR`               |
-| --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las             |
-| Administrador         | Alterar permissões ⚠️ EXEMPLO ⚠️      | Permitir que possam administrar contas |
+| EU COMO...`PERSONA`                     | QUERO/PRECISO ...`FUNCIONALIDADE`                                                       | PARA ...`MOTIVO/VALOR`                         |
+| ---------------------  | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Estudante de Psicologia| Cadastrar meus horários e minha área de atuação.                           | Ser encontrado por pessoas que precisam de ajuda e acumular horas de estágio reconhecidas pela instituição.|
+| Estudante de Psicologia| Acompanhar meu histórico acumulado.                                        | Que minha instituição valide as horas de estágio de forma automática, sem burocracia extra. |
+
+| Pessoa em situação de vulnerabilidade| Encontrar um psicólogo ou estudante supervisionado disponível para me atender gratuitamente| Conseguir apoio profissional qualificado sem me preocupar com o custo da consulta|
+| Pessoa em situação de vulnerabilidade| visualizar os horários disponíveis dos profissionais e escolher um                         | garantir meu atendimento de forma simples|
+
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -139,9 +166,9 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 **✳️✳️✳️ APRESENTE O DIAGRAMA DA PROPOSTA DE VALOR PARA CADA PERSONA ✳️✳️✳️**
 
-##### Proposta de valor para Persona XPTO ⚠️ EXEMPLO ⚠️
+##### Proposta de valor Geral
 
-![Exemplo de proposta de valor](images/exemplo-proposta-valor.png)
+![Proposta de valor](images/PropostadeValor.png)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -155,15 +182,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID     | Descrição do Requisito                                   | Prioridade |
 | ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário cadastre tarefas ⚠️ EXEMPLO ⚠️ | ALTA       |
-| RF-002 | Emitir um relatório de tarefas no mês ⚠️ EXEMPLO ⚠️ | MÉDIA     |
+| RF-001 | Permitir que o usuário procure por profissionais por diferentes filtros     | ALTA       |
+| RF-002 | Permitir que o usuário agende sessões com um profissional                   | MÉDIA     |
+| RF-003 | Permitir que o psicólogo/aluno acesse suas informações com tempo de trabalho| MÉDIA     |
+| RF-004 | Permitir que o usuário consiga avaliar as consultas                         | MÉDIA     |
+| RF-005 | Permitir que o usuário possa ver sua evolução                               | MÉDIA     |
 
 ### Requisitos não Funcionais
 
 | ID      | Descrição do Requisito                                                              | Prioridade |
 | ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel ⚠️ EXEMPLO ⚠️ | MÉDIA     |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s ⚠️ EXEMPLO ⚠️          | BAIXA      |
+| RNF-001 | O sistema deve ter uma ux/ui que remete a calma em função da saúde mental     | MÉDIA     |
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -195,7 +224,12 @@ Estes são os protótipos de telas do sistema.
 
 Descrição para a tela XPTO
 
-![Exemplo de wireframe](images/exemplo-wireframe.png)
+![Landing Page](images/LandingPage.png)
+![Tipo de conta](images/TipoConta.png)
+![Cadastro](images/CadastroConta.png)
+![Perfil Paciente](images/PerfilPaciente.png)
+![Perfil Psicologo](images/PerfilPsicologo.png)
+![Encontra Profissional](images/EncontrarPsicologo.png)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -212,7 +246,7 @@ Descrição para a tela XPTO
 
 **✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
 
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
+![Fluxo de telas](images/fluxoPaginas.png)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -228,7 +262,7 @@ Descrição para a tela XPTO
 
 **✳️✳️✳️ COLOQUE AQUI UM IFRAME COM SEU PROTÓTIPO INTERATIVO ✳️✳️✳️**
 
-✅ [Protótipo Interativo (MarvelApp)](https://marvelapp.com/prototype/4hd6091?emb=1&iosapp=false&frameless=false)  ⚠️ EXEMPLO ⚠️
+✅ [Protótipo Interativo (Figma)](https://www.figma.com/design/GXOGd5YW7pbgMaM1gm4hhd/Psyche?node-id=0-1&p=f&t=wL6hCwPEcL7zmgoz-0)  
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -244,15 +278,15 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
-| Processo de Design Thinking | Miro       | https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️        |
-| Repositório de código     | GitHub     | https://github.com/XXXXXXX ⚠️ EXEMPLO ⚠️      |
-| Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
-| Protótipo Interativo       | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
+| Processo de Design Thinking      | Miro       | https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️        |
+| Repositório de código            | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0438100-innertrip-2      |
+| Hospedagem do site               | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
+| Protótipo Interativo / Wireframe | Figma      | https://www.figma.com/design/GXOGd5YW7pbgMaM1gm4hhd/Psyche?node-id=0-1&p=f&t=wL6hCwPEcL7zmgoz-0 |
 |                             |            |                                                    |
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
-> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.
+> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) plataformas de hospedagem, entre outras.
 
 ## Gerenciamento do Projeto
 
@@ -317,36 +351,115 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
 
-##### Estrutura de Dados - Contatos   ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Psicologo 
 
-Contatos da aplicação
+Registro dos psicologos e alunos do sistema utilizados para login e para o perfil do sistema
 
 ```json
-  {
-    "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
-  }
+{
+            "id": 1,
+            "tipoUsuario": "psicologo",
+            "nome": "Pedro",
+            "sobrenome": "Cezar",
+            "login": "admin",
+            "senha": "123",
+            "crp": "00/00000000000",
+            "nascimento": "new Date()",
+            "cpf": "123.456.78",
+            "enderecoResidencial": {
+                "logradouro": "Rua Subida",
+                "tipoLogradouro": "casa",
+                "cep": "12.123.456"
+            },
+            "contato": {
+                "email": "psicologo1@gmail.com",
+                "telefone": "91234-1234",
+                "instagran": "@pedrocezar",
+                "linkedin": "@pedrocezar"
+            },
+            "perfil": {
+                "visitasPerfilMes": 32,
+                "conexoes": 4,
+                "solicitacoes": 2,
+                "biografia": "",
+                "horarioAtivo": "08:00-17:00"
+            },
+            "statusCasos": {
+                "resolvidos": 3,
+                "encaminhados": 2,
+                "andamento": 1
+            },
+            "pacientesId": [
+                3,
+                5
+            ],
+            "consultasId": [
+                1,
+                2
+            ],
+            "id_especializacao": 1
+}
   
 ```
 
-##### Estrutura de Dados - Usuários  ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Paciente
 
-Registro dos usuários do sistema utilizados para login e para o perfil do sistema
+Registro dos pacientes do sistema utilizados para login e para o perfil do sistema
 
 ```json
-  {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
-  }
+        {
+            "id": 3,
+            "tipoUsuario": "paciente",
+            "nome": "Arthur",
+            "sobrenome": "Moreira",
+            "login": "Arthur",
+            "senha": "12345",
+            "nascimento": "new Date()",
+            "cpf": "123.456.78",
+            "mesPsicologoId": {
+                "1": "Janeiro"
+            },
+            "enderecoResidencial": {
+                "logradouro": "Rua Descida",
+                "tipoLogradouro": "apartamento",
+                "cep": "12.123.456"
+            },
+            "contato": {
+                "email": "paciente@gmail.com",
+                "telefone": "91234-1234",
+                "telefoneEmergencia": "91234-1234",
+                "instagran": "@arth",
+                "linkedin": "@arth"
+            },
+            "perfil": {
+                "visitasPerfilMes": 32,
+                "conexoes": 4,
+                "solicitacoes": 2,
+                "biografia": ""
+            },
+            "humorMes": [
+                1,1,1,2,1,1,2,2,1,1,1,3,3,4,1
+            ],
+            "id_quadro": "1"
+        }
+```
+##### Estrutura de Dados - Consulta
+
+Registro das consultas do sistema utilizados para informar tanto os alunos quanto os psicologos (dashboard)
+
+```json
+        {
+            "id": 1,
+            "pacienteID": 3,
+            "psicologoID": 1,
+            "data_hora": "2024-04-24T11:00",
+            "local": "Biblioteca Comunitária",
+            "status": "confirmado",
+            "modalidade": "presencial",
+            "avaliacao": "Ótimo profissional, me ajudou muito no meu tratamento de ansiedade.",
+            "duracao": 3,
+            "notas": ""
+        }
 ```
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
