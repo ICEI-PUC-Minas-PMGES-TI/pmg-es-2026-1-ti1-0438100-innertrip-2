@@ -1,40 +1,25 @@
-{
-  "usuarios": [
-    {
-      "id": 1,
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
-    },
-    {
-      "id": 2,
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
-    },
-    {
-      "login": "rommel",
-      "senha": "123",
-      "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "id": 3
-    }
-  ],
-  "consultas": [
-    {
-      "id": 1,
-      "paciente": "Ana Souza",
-      "idade": 32,
-      "estagiario": "Arthur Moreira Figueiredo",
-      "data_hora": "2024-04-24T11:00",
-      "local": "Biblioteca Comunitária",
-      "status": "confirmado",
-      "modalidade": "presencial"
-    }
-  ]
-}
-
-
-  
+[
+  {
+    "usuarios": [
+      {"id":1,"tipoUsuario":"psicologo","nome":"Pedro","sobrenome":"Cezar","crp":"00/00000000000","nascimento":"new Date()","cpf":"123.456.78","enderecoResidencial":{"logradouro":"Rua Subida","tipoLogradouro":"casa","cep":"12.123.456"},"contato":{"email":"psicologo1@gmail.com","telefone":"91234-1234","instagran":"@pedrocezar","linkedin":"@pedrocezar"},"id_especializacao":"1"},
+      {"id":2,"tipoUsuario":"estudante","nome":"Victor","sobrenome":"Corradi","crp":"","nascimento":"new Date()","cpf":"123.456.78","enderecoResidencial":{"logradouro":"Rua Descida","tipoLogradouro":"apartamento","cep":"12.123.456"},"contato":{"email":"psicologo1@gmail.com","telefone":"91234-1234","instagran":"@vitorc","linkedin":"@vitorc"},"id_especializacao":"2"},
+      {"id":3,"tipoUsuario":"paciente","nome":"Arthur","sobrenome":"Moreira","nascimento":"new Date()","cpf":"123.456.78","enderecoResidencial":{"logradouro":"Rua Descida","tipoLogradouro":"apartamento","cep":"12.123.456"},"contato":{"email":"paciente@gmail.com","telefone":"91234-1234","instagran":"@arth","linkedin":"@arth"},"id_quadro":"1"},
+      {"id":4,"tipoUsuario":"faculdade","nome":"PUC","cnpj":"12.345.678/0001-00","email":"faculdade@gmail.com","telefone":"91234-1234"},
+      {"id":5,"tipoUsuario":"paciente","nome":"Ana","sobrenome":"Souza","nascimento":"1992-03-15","cpf":"234.567.89-01","enderecoResidencial":{"logradouro":"Av. Afonso Pena","tipoLogradouro":"apartamento","cep":"30.130-001"},"contato":{"email":"ana.souza@email.com","telefone":"99876-5432","instagran":"@anasouza","linkedin":"@anasouza"},"id_quadro":"3"},
+      {"id":6,"tipoUsuario":"paciente","nome":"João","sobrenome":"Santos","nascimento":"1999-07-22","cpf":"345.678.90-12","enderecoResidencial":{"logradouro":"Rua da Bahia","tipoLogradouro":"casa","cep":"30.160-010"},"contato":{"email":"joao.santos@email.com","telefone":"98765-4321","instagran":"@joaos","linkedin":"@joaos"},"id_quadro":"2"},
+      {"id":7,"tipoUsuario":"paciente","nome":"Bruna","sobrenome":"Lima","nascimento":"1999-11-05","cpf":"456.789.01-23","enderecoResidencial":{"logradouro":"Rua Guajajaras","tipoLogradouro":"apartamento","cep":"30.180-100"},"contato":{"email":"bruna.lima@email.com","telefone":"97654-3210","instagran":"@brunalima","linkedin":"@brunalima"},"id_quadro":"1"},
+      {"id":8,"tipoUsuario":"paciente","nome":"Marcelo","sobrenome":"Oliveira","nascimento":"2003-01-30","cpf":"567.890.12-34","enderecoResidencial":{"logradouro":"Av. do Contorno","tipoLogradouro":"casa","cep":"30.110-015"},"contato":{"email":"marcelo.oliveira@email.com","telefone":"96543-2109","instagran":"@marcelooliveira","linkedin":"@marcelooliveira"},"id_quadro":"4"},
+      {"id":9,"tipoUsuario":"paciente","nome":"Sandra","sobrenome":"Alves","nascimento":"1996-09-18","cpf":"678.901.23-45","enderecoResidencial":{"logradouro":"Rua Espírito Santo","tipoLogradouro":"apartamento","cep":"30.160-030"},"contato":{"email":"sandra.alves@email.com","telefone":"95432-1098","instagran":"@sandraalves","linkedin":"@sandraalves"},"id_quadro":"2"}
+    ],
+    "consultas": [
+      {"id":1,"pacienteID":"5","psicologoID":"1","data_hora":"2025-05-17T11:00","local":"Biblioteca Comunitária","status":"confirmado","modalidade":"presencial","avaliacao":"","notas":"Sessão de acompanhamento mensal."},
+      {"id":2,"pacienteID":"6","psicologoID":"1","data_hora":"2025-05-17T14:30","local":"Clínica Central","status":"confirmado","modalidade":"presencial","avaliacao":"","notas":""},
+      {"id":3,"pacienteID":"7","psicologoID":"2","data_hora":"2025-05-19T09:00","local":"Biblioteca Comunitária","status":"pendente","modalidade":"presencial","avaliacao":"","notas":"Aguardando confirmação de horário."},
+      {"id":4,"pacienteID":"8","psicologoID":"1","data_hora":"2025-05-19T15:00","local":"Comodidade","status":"pendente","modalidade":"remoto","avaliacao":"","notas":""},
+      {"id":5,"pacienteID":"9","psicologoID":"2","data_hora":"2025-05-21T18:00","local":"Extensão","status":"cancelado","modalidade":"presencial","avaliacao":"","notas":"Paciente remarcou para semana seguinte."},
+      {"id":6,"pacienteID":"3","psicologoID":"1","data_hora":"2025-05-14T10:00","local":"Clínica Central","status":"concluido","modalidade":"presencial","avaliacao":"5","notas":"Sessão concluída com sucesso."}
+    ],
+    "Especializacoes":[{"id":1,"area":"escolar"},{"id":2,"area":"geral"},{"id":3,"area":"emocional"},{"id":4,"area":"infanto-juvenil"}],
+    "Quadros":[{"id":1,"area":"aprendizado"},{"id":2,"area":"geral"},{"id":3,"area":"saude-mental"},{"id":4,"area":"infanto-juvenil"}]
+  }
+]
