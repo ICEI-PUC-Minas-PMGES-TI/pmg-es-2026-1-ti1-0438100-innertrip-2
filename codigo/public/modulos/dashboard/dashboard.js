@@ -129,12 +129,14 @@ function atualizarSmallCards(usuarios, consultas, usuarioCompleto) {
     totalHoras = consultasDoUsuario.reduce((acc, c) => acc + (c.duracao || 0), 0);
   }
   if (cards[1]) cards[1].textContent = `${totalHoras}h`;
- 
+  
   // [2] Visitas no Perfil — sem API por enquanto
-  if (cards[2]) cards[2].textContent = '—';
+  const totalVisitas = usuarioCompleto?.perfil.visitasPerfilMes;
+  if (cards[2]) cards[2].textContent = totalVisitas;
  
   // [3] Solicitações — sem API por enquanto
-  if (cards[3]) cards[3].textContent = '—';
+  const totalSolicitacoes = usuarioCompleto?.perfil.solicitacoes;  
+  if (cards[3]) cards[3].textContent = totalSolicitacoes;
 }
  
 /* ═══════════════════════════════════════════
