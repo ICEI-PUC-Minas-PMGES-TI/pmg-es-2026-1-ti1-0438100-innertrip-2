@@ -657,3 +657,24 @@ body {
   .summary-grid { grid-template-columns: 1fr 1fr; }
   .sum-value { font-size: 20px; }
 }
+/* ── Semana 2: novos estilos ── */
+.tag-remoto {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #1a44bd;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 20px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.actions-cell {
+  white-space: nowrap;
+}
+
+.td-muted {
+  color: var(--muted);
+  font-size: 13px;
+}

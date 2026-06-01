@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSYCHE – Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="cadastro.css" />
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <!-- LOGO HEADER -->
+  <header class="page-header">
+    <div class="logo-block">
+      <div class="logo-dot">P</div>
+      <span class="logo-text">PSYCHE</span>
+    </div>
+    <p class="header-sub">Plataforma de saúde mental</p>
+  </header>
+
+  <!-- CARD PRINCIPAL -->
+  <main class="card">
+
+    <div class="card-top">
+      <h1 class="card-title">Criar conta</h1>
+      <p class="card-desc">Selecione seu perfil e preencha o formulário abaixo.</p>
+    </div>
+
+    <!-- ABAS DE TIPO -->
+    <div class="tabs" role="tablist">
+      <button class="tab active" id="tab-paciente" role="tab"
+        aria-selected="true" aria-controls="form-paciente"
+        onclick="switchTab('paciente')">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a5 5 0 1 1 0 10A5 5 0 0 1 10 2zm0 12c-5 0-8 2.5-8 4v1h16v-1c0-1.5-3-4-8-4z"/></svg>
+        Paciente
+      </button>
+      <button class="tab" id="tab-psicologo" role="tab"
+        aria-selected="false" aria-controls="form-psicologo"
+        onclick="switchTab('psicologo')">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a5 5 0 1 1 0 10A5 5 0 0 1 10 2zm0 12c-4 0-7 2-7.5 3.5h15C17 14 14 14 10 14z"/><path d="M13 11l1 2-1.5 1L10 18l-2.5-4L6 13l1-2"/></svg>
+        Psicólogo / Estagiário
+      </button>
+    </div>
+
+    <!-- ═══════════ FORMULÁRIO PACIENTE ═══════════ -->
+    <form id="form-paciente" class="reg-form" novalidate onsubmit="submitForm(event, 'paciente')">
+
+      <div class="section-label">Dados Pessoais</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pac-nome">Nome <span class="req">*</span></label>
+          <input type="text" id="pac-nome" name="nome" placeholder="Seu nome" required />
+          <span class="field-error" id="err-pac-nome"></span>
+        </div>
+        <div class="form-group">
+          <label for="pac-sobrenome">Sobrenome <span class="req">*</span></label>
+          <input type="text" id="pac-sobrenome" name="sobrenome" placeholder="Seu sobrenome" required />
+          <span class="field-error" id="err-pac-sobrenome"></span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pac-cpf">CPF <span class="req">*</span></label>
+          <input type="text" id="pac-cpf" name="cpf" placeholder="000.000.000-00"
+            maxlength="14" oninput="maskCPF(this)" required />
+          <span class="field-error" id="err-pac-cpf"></span>
+        </div>
+        <div class="form-group">
+          <label for="pac-nascimento">Data de Nascimento <span class="req">*</span></label>
+          <input type="date" id="pac-nascimento" name="nascimento" required />
+          <span class="field-error" id="err-pac-nascimento"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="pac-quadro">Quadro / Área de Interesse</label>
+        <select id="pac-quadro" name="id_quadro">
+          <option value="">Selecione (opcional)</option>
+          <option value="1">Aprendizado</option>
+          <option value="2">Geral</option>
+          <option value="3">Saúde Mental</option>
+          <option value="4">Infanto-Juvenil</option>
+        </select>
+      </div>
+
+      <div class="section-label">Endereço</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pac-logradouro">Logradouro <span class="req">*</span></label>
+          <input type="text" id="pac-logradouro" name="logradouro" placeholder="Rua, Av., etc." required />
+          <span class="field-error" id="err-pac-logradouro"></span>
+        </div>
+        <div class="form-group">
+          <label for="pac-tipo">Tipo <span class="req">*</span></label>
+          <select id="pac-tipo" name="tipoLogradouro" required>
+            <option value="">Selecione</option>
+            <option value="casa">Casa</option>
+            <option value="apartamento">Apartamento</option>
+            <option value="comercial">Comercial</option>
+          </select>
+          <span class="field-error" id="err-pac-tipo"></span>
+        </div>
+      </div>
+
+      <div class="form-group" style="max-width:200px">
+        <label for="pac-cep">CEP <span class="req">*</span></label>
+        <input type="text" id="pac-cep" name="cep" placeholder="00000-000"
+          maxlength="9" oninput="maskCEP(this)" required />
+        <span class="field-error" id="err-pac-cep"></span>
+      </div>
+
+      <div class="section-label">Contato</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pac-email">E-mail <span class="req">*</span></label>
+          <input type="email" id="pac-email" name="email" placeholder="email@exemplo.com" required />
+          <span class="field-error" id="err-pac-email"></span>
+        </div>
+        <div class="form-group">
+          <label for="pac-telefone">Telefone <span class="req">*</span></label>
+          <input type="text" id="pac-telefone" name="telefone" placeholder="(00) 00000-0000"
+            maxlength="15" oninput="maskTelefone(this)" required />
+          <span class="field-error" id="err-pac-telefone"></span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pac-instagram">Instagram</label>
+          <input type="text" id="pac-instagram" name="instagram" placeholder="@usuario" />
+        </div>
+        <div class="form-group">
+          <label for="pac-linkedin">LinkedIn</label>
+          <input type="text" id="pac-linkedin" name="linkedin" placeholder="@usuario" />
+        </div>
+      </div>
+
+      <div class="section-label">Acesso</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pac-login">Login <span class="req">*</span></label>
+          <input type="text" id="pac-login" name="login" placeholder="Escolha um login" required />
+          <span class="field-error" id="err-pac-login"></span>
+        </div>
+        <div class="form-group">
+          <label for="pac-senha">Senha <span class="req">*</span></label>
+          <div class="password-wrap">
+            <input type="password" id="pac-senha" name="senha" placeholder="Mínimo 6 caracteres" required />
+            <button type="button" class="btn-eye" onclick="toggleSenha('pac-senha', this)" title="Mostrar senha">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 3C5 3 1.73 7.11 1 10c.73 2.89 4 7 9 7s8.27-4.11 9-7c-.73-2.89-4-7-9-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="err-pac-senha"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="pac-confirma">Confirmar Senha <span class="req">*</span></label>
+        <div class="password-wrap">
+          <input type="password" id="pac-confirma" name="confirma" placeholder="Repita a senha" required />
+          <button type="button" class="btn-eye" onclick="toggleSenha('pac-confirma', this)" title="Mostrar senha">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 3C5 3 1.73 7.11 1 10c.73 2.89 4 7 9 7s8.27-4.11 9-7c-.73-2.89-4-7-9-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+          </button>
+        </div>
+        <span class="field-error" id="err-pac-confirma"></span>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary btn-full" id="btn-submit-pac">
+          Criar conta como Paciente
+        </button>
+      </div>
+
+    </form>
+
+    <!-- ═══════════ FORMULÁRIO PSICÓLOGO ═══════════ -->
+    <form id="form-psicologo" class="reg-form hidden" novalidate onsubmit="submitForm(event, 'psicologo')">
+
+      <div class="section-label">Dados Pessoais</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="psi-nome">Nome <span class="req">*</span></label>
+          <input type="text" id="psi-nome" name="nome" placeholder="Seu nome" required />
+          <span class="field-error" id="err-psi-nome"></span>
+        </div>
+        <div class="form-group">
+          <label for="psi-sobrenome">Sobrenome <span class="req">*</span></label>
+          <input type="text" id="psi-sobrenome" name="sobrenome" placeholder="Seu sobrenome" required />
+          <span class="field-error" id="err-psi-sobrenome"></span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="psi-cpf">CPF <span class="req">*</span></label>
+          <input type="text" id="psi-cpf" name="cpf" placeholder="000.000.000-00"
+            maxlength="14" oninput="maskCPF(this)" required />
+          <span class="field-error" id="err-psi-cpf"></span>
+        </div>
+        <div class="form-group">
+          <label for="psi-nascimento">Data de Nascimento <span class="req">*</span></label>
+          <input type="date" id="psi-nascimento" name="nascimento" required />
+          <span class="field-error" id="err-psi-nascimento"></span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="psi-tipo">Tipo <span class="req">*</span></label>
+          <select id="psi-tipo" name="tipoUsuario" required onchange="toggleCRP()">
+            <option value="">Selecione</option>
+            <option value="psicologo">Psicólogo</option>
+            <option value="estudante">Estagiário / Estudante</option>
+          </select>
+          <span class="field-error" id="err-psi-tipo"></span>
+        </div>
+        <div class="form-group" id="group-crp">
+          <label for="psi-crp">CRP <span class="req" id="req-crp">*</span></label>
+          <input type="text" id="psi-crp" name="crp" placeholder="00/00000000" />
+          <span class="field-error" id="err-psi-crp"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="psi-especializacao">Especialização</label>
+        <select id="psi-especializacao" name="id_especializacao">
+          <option value="">Selecione (opcional)</option>
+          <option value="1">Escolar</option>
+          <option value="2">Geral</option>
+          <option value="3">Emocional</option>
+          <option value="4">Infanto-Juvenil</option>
+        </select>
+      </div>
+
+      <div class="section-label">Endereço</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="psi-logradouro">Logradouro <span class="req">*</span></label>
+          <input type="text" id="psi-logradouro" name="logradouro" placeholder="Rua, Av., etc." required />
+          <span class="field-error" id="err-psi-logradouro"></span>
+        </div>
+        <div class="form-group">
+          <label for="psi-tipo-end">Tipo <span class="req">*</span></label>
+          <select id="psi-tipo-end" name="tipoLogradouro" required>
+            <option value="">Selecione</option>
+            <option value="casa">Casa</option>
+            <option value="apartamento">Apartamento</option>
+            <option value="comercial">Comercial</option>
+          </select>
+          <span class="field-error" id="err-psi-tipo-end"></span>
+        </div>
+      </div>
+
+      <div class="form-group" style="max-width:200px">
+        <label for="psi-cep">CEP <span class="req">*</span></label>
+        <input type="text" id="psi-cep" name="cep" placeholder="00000-000"
+          maxlength="9" oninput="maskCEP(this)" required />
+        <span class="field-error" id="err-psi-cep"></span>
+      </div>
+
+      <div class="section-label">Contato</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="psi-email">E-mail <span class="req">*</span></label>
+          <input type="email" id="psi-email" name="email" placeholder="email@exemplo.com" required />
+          <span class="field-error" id="err-psi-email"></span>
+        </div>
+        <div class="form-group">
+          <label for="psi-telefone">Telefone <span class="req">*</span></label>
+          <input type="text" id="psi-telefone" name="telefone" placeholder="(00) 00000-0000"
+            maxlength="15" oninput="maskTelefone(this)" required />
+          <span class="field-error" id="err-psi-telefone"></span>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="psi-instagram">Instagram</label>
+          <input type="text" id="psi-instagram" name="instagram" placeholder="@usuario" />
+        </div>
+        <div class="form-group">
+          <label for="psi-linkedin">LinkedIn</label>
+          <input type="text" id="psi-linkedin" name="linkedin" placeholder="@usuario" />
+        </div>
+      </div>
+
+      <div class="section-label">Acesso</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="psi-login">Login <span class="req">*</span></label>
+          <input type="text" id="psi-login" name="login" placeholder="Escolha um login" required />
+          <span class="field-error" id="err-psi-login"></span>
+        </div>
+        <div class="form-group">
+          <label for="psi-senha">Senha <span class="req">*</span></label>
+          <div class="password-wrap">
+            <input type="password" id="psi-senha" name="senha" placeholder="Mínimo 6 caracteres" required />
+            <button type="button" class="btn-eye" onclick="toggleSenha('psi-senha', this)" title="Mostrar senha">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 3C5 3 1.73 7.11 1 10c.73 2.89 4 7 9 7s8.27-4.11 9-7c-.73-2.89-4-7-9-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+            </button>
+          </div>
+          <span class="field-error" id="err-psi-senha"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="psi-confirma">Confirmar Senha <span class="req">*</span></label>
+        <div class="password-wrap">
+          <input type="password" id="psi-confirma" name="confirma" placeholder="Repita a senha" required />
+          <button type="button" class="btn-eye" onclick="toggleSenha('psi-confirma', this)" title="Mostrar senha">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 3C5 3 1.73 7.11 1 10c.73 2.89 4 7 9 7s8.27-4.11 9-7c-.73-2.89-4-7-9-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+          </button>
+        </div>
+        <span class="field-error" id="err-psi-confirma"></span>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary btn-full" id="btn-submit-psi">
+          Criar conta como Psicólogo
+        </button>
+      </div>
+
+    </form>
+
+    <p class="login-link">Já tem conta? <a href="../login/login.html">Entrar</a></p>
+
+  </main>
+
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="cadastro.js"></script>
+</body>
+</html>
