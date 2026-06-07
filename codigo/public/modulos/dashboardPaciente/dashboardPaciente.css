@@ -294,3 +294,40 @@ article{
 .avatarAval{
   margin-right: 20px;
 }
+
+/* ═══════════════════════════════════════════
+   Emotion Buttons
+═══════════════════════════════════════════ */
+#btnEmocoes{
+  margin-top: 20px;
+}
+#btnEmocoes button{
+  background-color: #ecd870;
+  border: none;
+  border-radius: 21px;
+  height: 30px;
+  width: 60px;
+  margin: 0 10px;
+}
+#btnEmocoes button:hover{
+  background-color: #b89e1c;
+}
+#btnEmocoes button.ativo {
+  background-color: #b89e1c;
+}
+#barraContainer {
+  width: 80%;
+  height: 24px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+#barraProgresso {
+  height: 100%;
+  width: 0%;
+  border-radius: 12px;
+  background-color: #4caf50;
+  transition: width 0.6s ease, background-color 0.4s ease;
+}
