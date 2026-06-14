@@ -1,78 +1,489 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script src="./assets/js/login.js"></script>
-  </head>
-  <body>
-    <header>
-      <div class="banner">
-        <img src="./assets/images/banner_ti.png" alt="" />
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSYCHE – Plataforma de Saúde Mental</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAV
+═══════════════════════════════════════════ -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-dot">P</div>
+    <span class="nav-brand">PSYCHE</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#funcionalidades">Funcionalidades</a></li>
+    <li><a href="#para-voce">Para você</a></li>
+    <li><a href="#modulos">Módulos</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <a href="modulos/login/login.html" class="btn-ghost">Entrar</a>
+    <a href="modulos/cadastro/index.html" class="btn-yellow">Criar conta</a>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#como-funciona" onclick="toggleMenu()">Como funciona</a>
+  <a href="#funcionalidades" onclick="toggleMenu()">Funcionalidades</a>
+  <a href="#para-voce" onclick="toggleMenu()">Para você</a>
+  <a href="#modulos" onclick="toggleMenu()">Módulos</a>
+  <a href="modulos/login/login.html" class="btn-ghost" style="text-align:center;justify-content:center;">Entrar</a>
+  <a href="modulos/cadastro/index.html" class="btn-yellow">Criar conta →</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="hero-eyebrow">
+      <span></span>
+      Plataforma de saúde mental
+    </div>
+
+    <h1 class="hero-title">
+      Sua mente
+      <span class="accent">merece cuidado.</span>
+    </h1>
+
+    <p class="hero-sub">
+      PSYCHE conecta <strong>pacientes</strong> a psicólogos qualificados de forma
+      simples, segura e acessível. Acompanhamento real para uma vida mais equilibrada.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="modulos/cadastro/index.html" class="btn-hero-primary">
+        Começar agora
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round"
+          style="width:16px;height:16px">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </a>
+      <a href="#como-funciona" class="btn-hero-secondary">
+        Ver como funciona
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">4<span class="yellow">+</span></div>
+        <div class="hero-stat-label">Especializações</div>
       </div>
-      <div class="barra-info">
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Sobre nós</a></li>
-          </ul>
-        </nav>
-        <div class="dados-usuario">
-          <span id="userInfo"></span>
+      <div>
+        <div class="hero-stat-num">2<span class="yellow">x</span></div>
+        <div class="hero-stat-label">Perfis disponíveis</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">100<span class="yellow">%</span></div>
+        <div class="hero-stat-label">Seguro e privado</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">0<span class="yellow">h</span></div>
+        <div class="hero-stat-label">Espera para cadastro</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     MARQUEE STRIP
+═══════════════════════════════════════════ -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Saúde Mental <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Psicologia Clínica <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Bem-estar <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Consultas Online <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Psicólogos Verificados <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Acompanhamento Contínuo <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Equilíbrio Emocional <span class="marquee-dot"></span></span>
+    <span class="marquee-item">PSYCHE <span class="marquee-dot"></span></span>
+    <!-- duplicado para loop contínuo -->
+    <span class="marquee-item">Saúde Mental <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Psicologia Clínica <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Bem-estar <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Consultas Online <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Psicólogos Verificados <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Acompanhamento Contínuo <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Equilíbrio Emocional <span class="marquee-dot"></span></span>
+    <span class="marquee-item">PSYCHE <span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     COMO FUNCIONA
+═══════════════════════════════════════════ -->
+<section class="how-section" id="como-funciona">
+  <div class="section-inner">
+
+    <p class="section-label reveal">Como funciona</p>
+    <h2 class="section-title reveal reveal-delay-1">
+      Três passos para<br>começar sua jornada
+    </h2>
+    <p class="section-desc reveal reveal-delay-2">
+      Criamos o caminho mais simples possível para que você tenha acesso ao cuidado que precisa.
+    </p>
+
+    <div class="steps-grid">
+
+      <div class="step-card reveal">
+        <div class="step-number">01</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 2a5 5 0 1 1 0 10A5 5 0 0 1 10 2zm0 12c-5 0-8 2.5-8 4v1h16v-1c0-1.5-3-4-8-4z"/>
+          </svg>
+        </div>
+        <div class="step-title">Crie sua conta</div>
+        <div class="step-desc">
+          Cadastro rápido como paciente ou psicólogo. Preencha seu perfil com segurança — seus dados ficam protegidos.
         </div>
       </div>
-    </header>
-    <main>
-        <h3>Boas vindas</h3>
-        <p>Sejam bem-vindos à home-page do projeto de TI 1 - Trabalho
-        Interdisciplinar</p>
-        <p>Esse conteúdo que você está lendo foi criado para exemplificar como
-        criar o seu site integrado com o ambiente de login e o back end que
-        utiliza o JSON Server.</p>
-        <p>Ao criar o seu site, você deve adaptar esse código para sua neessidade ou começar do zero, excluindo todo esse conteúdo.
+
+      <div class="step-card reveal reveal-delay-1">
+        <div class="step-number">02</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M3 3h14v14H3zm2 2v10h10V5H5zm1.5 2h7v1.5h-7zm0 3h7v1.5h-7zm0 3h5v1.5h-5z"/>
+          </svg>
+        </div>
+        <div class="step-title">Agende uma consulta</div>
+        <div class="step-desc">
+          Encontre psicólogos disponíveis e agende sua consulta em minutos. Presencial ou remoto, você escolhe.
+        </div>
+      </div>
+
+      <div class="step-card reveal reveal-delay-2">
+        <div class="step-number">03</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 2a8 8 0 1 1 0 16A8 8 0 0 1 10 2zm.75 5.25h-1.5v4l3.5 2 .75-1.3-2.75-1.6V7.25z"/>
+          </svg>
+        </div>
+        <div class="step-title">Acompanhe seu progresso</div>
+        <div class="step-desc">
+          Histórico completo de consultas, notas e evolução. Seu cuidado registrado em um só lugar.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FUNCIONALIDADES
+═══════════════════════════════════════════ -->
+<section class="features-section" id="funcionalidades">
+  <div class="section-inner">
+
+    <p class="section-label reveal">Funcionalidades</p>
+    <h2 class="section-title reveal reveal-delay-1">
+      Tudo que você precisa<br>em um só lugar
+    </h2>
+    <p class="section-desc reveal reveal-delay-2">
+      Da primeira consulta ao acompanhamento contínuo, o PSYCHE oferece as ferramentas certas.
+    </p>
+
+    <div class="features-grid">
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M3 4h14v2H3zm0 5h14v2H3zm0 5h9v2H3z"/>
+          </svg>
+        </div>
+        <div class="feat-title">Dashboard completo</div>
+        <div class="feat-desc">Visualize resumos, consultas pendentes e estatísticas do seu atendimento em tempo real.</div>
+      </div>
+
+      <div class="feat-card highlight reveal reveal-delay-1">
+        <div class="feat-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M6 2h8a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm1 4v2h6V6H7zm0 4v2h6v-2H7zm0 4v2h4v-2H7z"/>
+          </svg>
+        </div>
+        <div class="feat-title">Gestão de consultas</div>
+        <div class="feat-desc">Cadastre, filtre, acompanhe e avalie cada atendimento. Status em tempo real: pendente, confirmado ou concluído.</div>
+      </div>
+
+      <div class="feat-card reveal reveal-delay-2">
+        <div class="feat-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 2a5 5 0 1 1 0 10A5 5 0 0 1 10 2zm0 12c-5 0-8 2.5-8 4v1h16v-1c0-1.5-3-4-8-4z"/>
+          </svg>
+        </div>
+        <div class="feat-title">Perfis especializados</div>
+        <div class="feat-desc">Cadastro diferenciado para pacientes e psicólogos, com validação de CRP, especializações e quadros clínicos.</div>
+      </div>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 5h16v2H2zm0 4h16v2H2zm0 4h10v2H2z"/>
+          </svg>
+        </div>
+        <div class="feat-title">Busca e filtros avançados</div>
+        <div class="feat-desc">Encontre psicólogos por especialização, disponibilidade e localidade. Filtragem inteligente de consultas.</div>
+      </div>
+
+      <div class="feat-card reveal reveal-delay-1">
+        <div class="feat-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 2a8 8 0 1 1 0 16A8 8 0 0 1 10 2zm.75 5.25h-1.5v4l3.5 2 .75-1.3-2.75-1.6V7.25z"/>
+          </svg>
+        </div>
+        <div class="feat-title">Agendamento inteligente</div>
+        <div class="feat-desc">Marque consultas em horários disponíveis e receba confirmação instantânea. Presencial ou remoto.</div>
+      </div>
+
+      <div class="feat-card reveal reveal-delay-2">
+        <div class="feat-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 1l2.39 4.84L18 6.91l-4 3.9.94 5.5L10 13.77l-4.94 2.54.94-5.5L2 6.91l5.61-.07z"/>
+          </svg>
+        </div>
+        <div class="feat-title">Avaliação de atendimentos</div>
+        <div class="feat-desc">Avalie cada consulta com notas de 1 a 5. Qualidade sempre em primeiro lugar.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     PARA VOCÊ (PERFIS)
+═══════════════════════════════════════════ -->
+<section class="profiles-section" id="para-voce">
+  <div class="section-inner">
+
+    <p class="section-label reveal">Para você</p>
+    <h2 class="section-title reveal reveal-delay-1" style="color:var(--white)">
+      Dois perfis,<br>uma plataforma
+    </h2>
+
+    <div class="profiles-grid">
+
+      <!-- Paciente -->
+      <div class="profile-card reveal">
+        <div class="profile-tag">
+          <svg viewBox="0 0 14 14" fill="currentColor" style="width:11px;height:11px">
+            <circle cx="7" cy="4" r="3"/>
+            <path d="M1 13c0-3.3 2.7-5 6-5s6 1.7 6 5"/>
+          </svg>
+          Paciente
+        </div>
+        <div class="profile-title">Cuide da<br>sua mente</div>
+        <div class="profile-desc">
+          Acesse psicólogos verificados, acompanhe seu histórico de consultas e tenha controle total do seu cuidado emocional.
+        </div>
+        <ul class="profile-perks">
+          <li><span class="perk-dot"></span>Cadastro simples e seguro</li>
+          <li><span class="perk-dot"></span>Busca por psicólogos disponíveis</li>
+          <li><span class="perk-dot"></span>Agendamento em minutos</li>
+          <li><span class="perk-dot"></span>Histórico completo de atendimentos</li>
+        </ul>
+        <a href="modulos/cadastro/index.html" class="profile-cta">
+          Criar conta como Paciente
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Psicólogo -->
+      <div class="profile-card reveal reveal-delay-1">
+        <div class="profile-tag">
+          <svg viewBox="0 0 14 14" fill="currentColor" style="width:11px;height:11px">
+            <circle cx="7" cy="4" r="3"/>
+            <path d="M1 13c0-3.3 2.7-5 6-5s6 1.7 6 5"/>
+          </svg>
+          Psicólogo / Estagiário
+        </div>
+        <div class="profile-title">Expanda sua<br>prática clínica</div>
+        <div class="profile-desc">
+          Gerencie sua agenda, seus pacientes e consultas com uma plataforma pensada para profissionais de saúde mental.
+        </div>
+        <ul class="profile-perks">
+          <li><span class="perk-dot"></span>Perfil com CRP validado</li>
+          <li><span class="perk-dot"></span>Gestão de pacientes e consultas</li>
+          <li><span class="perk-dot"></span>Área do estagiário com suporte</li>
+          <li><span class="perk-dot"></span>Dashboard de acompanhamento</li>
+        </ul>
+        <a href="modulos/cadastro/index.html" class="profile-cta">
+          Criar conta como Psicólogo
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 8h10M9 4l4 4-4 4"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     MÓDULOS
+═══════════════════════════════════════════ -->
+<section class="modules-section" id="modulos">
+  <div class="section-inner">
+
+    <p class="section-label reveal">Navegue pela plataforma</p>
+    <h2 class="section-title reveal reveal-delay-1">
+      Acesse os módulos<br>diretamente
+    </h2>
+
+    <div class="modules-grid">
+
+      <a href="modulos/login/login.html" class="module-card reveal">
+        <div class="module-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 2a5 5 0 1 1 0 10A5 5 0 0 1 10 2zm0 12c-5 0-8 2.5-8 4v1h16v-1c0-1.5-3-4-8-4z"/>
+          </svg>
+        </div>
+        <div class="module-title">Login</div>
+        <div class="module-desc">Acesse sua conta com login e senha cadastrados.</div>
+        <div class="module-link">
+          Acessar
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 6h8M7 3l3 3-3 3"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="modulos/cadastro/index.html" class="module-card reveal reveal-delay-1">
+        <div class="module-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10 3a7 7 0 1 1 0 14A7 7 0 0 1 10 3zm0 3v4h4v-1.5h-2.5V6H10z"/>
+          </svg>
+        </div>
+        <div class="module-title">Cadastro</div>
+        <div class="module-desc">Crie sua conta como paciente ou psicólogo.</div>
+        <div class="module-link">
+          Acessar
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 6h8M7 3l3 3-3 3"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="modulos/consultas/index.html" class="module-card reveal reveal-delay-2">
+        <div class="module-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M6 2h8a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm1 4v2h6V6H7zm0 4v2h6v-2H7zm0 4v2h4v-2H7z"/>
+          </svg>
+        </div>
+        <div class="module-title">Consultas</div>
+        <div class="module-desc">Gerencie e acompanhe todos os atendimentos.</div>
+        <div class="module-link">
+          Acessar
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 6h8M7 3l3 3-3 3"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="modulos/Encontrar Psicólogos/innertrip_psicologos/psicologos.html" class="module-card reveal reveal-delay-3">
+        <div class="module-icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="#FFD60A" stroke-width="2"
+            stroke-linecap="round">
+            <circle cx="8.5" cy="8.5" r="6.5"/>
+            <path d="M17 17l-3.5-3.5"/>
+          </svg>
+        </div>
+        <div class="module-title">Encontrar Psicólogos</div>
+        <div class="module-desc">Busque profissionais por especialização e disponibilidade.</div>
+        <div class="module-link">
+          Acessar
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 6h8M7 3l3 3-3 3"/>
+          </svg>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-dot">P</div>
+          <span class="nav-brand">PSYCHE</span>
+        </a>
+        <p class="footer-tagline">
+          Plataforma de saúde mental que conecta pacientes e psicólogos de forma simples e segura.
         </p>
+      </div>
 
-        <h3>Arquivos do site (Front End)</h3>
-        <p>Para montar seu site, edite os arquivos existentes e crie novos arquivos na pasta <code>public</code> que mantem todos os arquivos da parte de Front End do site, a interface que é vista pelo usuário no navegador.</p>
-
-        <p>Nesta pasta <code>public</code>, sugerimos que você organize os arquivos do seu site da seguinte maneira:</p>
-        <ul>
-            <li><strong>Pasta <code>assets</code></strong>: os arquivos de formatação (CSS), os scripts (JS), as imagens utilizadas no site (JPG, PNG, GIF, SVG, etc), fontes (TTF) e outros arquivos gerais utilizados por todo o site.</li>
-            <li><strong>Pasta <code>modulos</code></strong>: os arquivos utilizados na implementação das funcionalidades do site. Separe uma sub-pasta para cada novo módulo ou funcionalidade. Pode também ser utilizado para dividir o trabalho de cada membro do grupo.</li>
-            <li><strong>Arquivo <code>index.html</code></strong>: arquivo que representa a "home page" do site.</li>
+      <div>
+        <div class="footer-col-title">Plataforma</div>
+        <ul class="footer-links">
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#funcionalidades">Funcionalidades</a></li>
+          <li><a href="#para-voce">Para pacientes</a></li>
+          <li><a href="#para-voce">Para psicólogos</a></li>
         </ul>
+      </div>
 
-        <h3>Módulo de Login</h3>
-        <p>O módulo de login de usuário traz uma funcionalidade completa de registro de usuários e validação de login e senha.</p>
-        <h4>Integração do site com módulo de Login</h4>
-        <p>Para utilizar o módulo de login, basta incluir o script na sua página colocando a seguinte tag no HEAD</p>
-        <pre>&lt;script src="./assets/js/login.js"&gt&lt;script&gt;</pre>
-        <p>Ao incluir o script de login na sua página, caso o usuário ainda não tenha efetuado login, ao acessar a home-page do site, o navegador será direcionado para o formulário de <strong>Identificação de Usuário</strong>. Se o usuário informar corretamente o login e a senha, o navegador será direcionado para a Home-Page.</p>
-        <h4>Sessão do usuário logado</h4>
-        <p>Assim que o usuário se identifica e acessa a parte privada do site, o módulo de login cria uma chave do sessionStorage do navegador com o título <strong>usuarioCorrente</strong> e cujo conteúdo é um objeto com os atributos: id, nome, login, senha e email. </p>
-        <h4>Base de dados de usuários</h4>
-        <p>Inicialmente o módulo de login é configurado com dois usuários: </p>
-        <ul>
-            <li>admin - Senha: 123</li>
-            <li>user - Senha: 123</li>
+      <div>
+        <div class="footer-col-title">Módulos</div>
+        <ul class="footer-links">
+          <li><a href="modulos/login/login.html">Login</a></li>
+          <li><a href="modulos/cadastro/index.html">Cadastro</a></li>
+          <li><a href="modulos/consultas/index.html">Consultas</a></li>
+          <li><a href="modulos/Encontrar Psicólogos/innertrip_psicologos/psicologos.html">Encontrar Psicólogos</a></li>
         </ul>
+      </div>
 
-        <h3>Servidor Web e API baseada no JSON Server (Back end)</h3>
-        <p>O ambiente de trabalho disponibilizado para suportar o Trabalho Interdisciplinar 1 é baseado no Node.js. A aplicação de back end utiliza o módulo JSON Server para criar um Servidor Web que prove duas estruturas separadas:
-        <ul>
-            <li><strong>Arquivos estáticos (Pasta <code>public</code>)</strong>: da acesso aos arquivos utilizados no front end (HTML, CSS e JavaScript).</li>
-            <li><strong>API RESTful (pasta <code>db</code>)</strong>: uma interface para acesso aos dados definidos no arquivo db.json.</li>
-        </ul></p>
+    </div>
 
-        <h4>Arquitetura do site</h4>
-        <p>A imagem que se segue apresenta a arquitetura desse ambiente, mostrando as duas refletindo as pastas desse ambiente.</p>
-        <p><img class="img-fluid d-block w-75 m-auto" src="./assets/images/servidor.png" alt=""></p>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 PSYCHE – InnerTrip. Todos os direitos reservados.</p>
+      <p class="footer-puc">Projeto <span>PUC Minas</span> · TIAW 2026/1</p>
+    </div>
 
-        <h4>Arquivo db.json</h4>
-        <p>O arquivo JSON utilizado para definição das estruturas dos dados providos pela aplicação é localizado na pasta db e tem um formato como o mostrado no exemplo da figura a seguir. Esse arquivo define uma estrutura hipotética de contatos que descreve itens com os seguintes atributos: <code>id</code>, <code>nome</code> e <code>cidade</code>. para o JSON Server, é fundamental que toda estrutura tenha um atributo de identificador de nome <code>id</code>.</p>
-        <p><img class="img-fluid d-block w-50 m-auto" src="./assets/images/arquivo_json.png" alt=""></p>
-    </main>
-  </body>
+  </div>
+</footer>
+
+<script src="home.js"></script>
+</body>
 </html>
