@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnerTrip - Psicólogos</title>
+  <link rel="stylesheet" href="psicologos.css">
+</head>
+<body>
+
+  <aside>
+    <h1>InnerTrip</h1>
+    <a href="#">Início</a>
+    <a href="#">Agendamento</a>
+    <a href="psicologos.html" class="ativo">Psicólogos</a>
+    <a href="#">Consultas</a>
+  </aside>
+
+  <main>
+    <header>
+      <h2>Encontre Psicólogos</h2>
+      <p>Busque profissionais cadastrados na plataforma InnerTrip.</p>
+    </header>
+
+    <section class="busca">
+      <input type="text" id="campoBusca" placeholder="Buscar por nome ou especialidade">
+      <button onclick="buscarPsicologos()">Buscar</button>
+    </section>
+
+    <section id="listaPsicologos" class="cards"></section>
+  </main>
+
+  <script src="psicologos.js"></script>
+</body>
+</html>
