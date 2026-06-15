@@ -7,7 +7,7 @@
     <title>PSYCHE – Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel='stylesheet' href='dashboard.css'>
+    <link rel='stylesheet' href='dashboardPaciente.css'>
     
 </head>
 
@@ -65,7 +65,7 @@
         <header>
             <div id="headContent">
                 <h2>Dashboard</h2>
-                <p>Veja aqui as informações e estatisticas do seu trabalho no Psyche</p>
+                <p>Veja aqui as informações e estatisticas da sua evolução pessoal com o Psyche</p>
             </div>
             <div id="headBtns">
                 <div class="avatar-circle" id="sidebarAvatar">--</div>
@@ -76,15 +76,15 @@
         <section>
             <div id="titleSection">
                 <h1>Bem vindo, User!</h1>
-                <p>Você trabalhou 50 horas essa semana e conquistou 3 novos pacientes.</p>                
+                <p>Você participou de sessões por 3 horas essa semana.</p>                
             </div>
             <div id="smallCards">
                 <div class="cardsSm">
-                    <p>Total de Pacientes</p>
+                    <p>Total de Sessões</p>
                     <h1>0</h1>
                 </div>
                 <div class="cardsSm">
-                    <p>Total de Horas trabalhadas</p>
+                    <p>Total de Horas em sessões</p>
                     <h1>0</h1>
                 </div>
                 <div class="cardsSm">
@@ -92,7 +92,7 @@
                     <h1>0</h1>
                 </div>
                 <div class="cardsSm">
-                    <p>Solicitações</p>
+                    <p>Conexões</p>
                     <h1>0</h1>
                 </div>
             </div>
@@ -100,76 +100,62 @@
 
         <!--Article-->
         <article>
-            <!--Grafico de Barras-->
-            <div class="cardsArt cardN" id="barChart">
-                <div id="titleChart">
-                    <h2>Horas Trabalhadas</h2>
-                    <div id="btnChart">
-                        <div class="selectRange">Ano</div>
-                        <div class="selectRange">Mes</div>
-                        <div class="selectRange">Semana</div>
-                    </div>
+            <!--Resumo das últimas consultas-->
+            <div class="cardsArt cardN" id="resumoCard">
+                <div id="titleResumo">
+                    <h2>Resumo das últimas sessões</h2>
                 </div>
-                
+                <div id="textResumo">
+                    <h2 id="labelHumor">Feliz</h2>
+                </div>
+                <div id="btnEmocoes">
+                    <button>Feliz</button>
+                    <button>Triste</button>
+                    <button>Ansioso</button>
+                    <button>Irritado</button>
+                </div>
+                <div id="barraContainer">
+                    <div id="barraProgresso"></div>
+                </div>
+                <p id="textoHumor"></p>
             </div>
 
-            <!--Conquista de Pacientes-->
-            <div class="cardsArt cardN" id="conquista">
-                <h2 id="conTitle">Conquista de pacientes</h2>
-                <div id="inConq">
-                    <div class="conMes conPlus"><p>Janeiro</p><h2>+3 pacientes</h2></div>
-                    <div class="conMes conMinus"><p>Fevereiro</p><h2>-1 pacientes</h2></div>
-                    <div class="conMes"><p>Marco</p><h2>0 pacientes</h2></div>
-                    <div class="conMes"><p>Abril</p><h2>0 pacientes</h2></div>
-                    <div class="conMes"><p>Maio</p><h2>0 pacientes</h2></div>
-                    <div class="conMes"><p>Junho</p><h2>0 pacientes</h2></div>
+            <!--Próxima Sessão-->
+            <div class="cardsArt cardN" id="sessaoNextCard">
+                <h2 class="sessaoTitle">Próxima sessão</h2>
+                <div class="inSessao">
+                    <div id="infoNext" class="infoSessao">
+
+                    </div>
+                    <button>Acessar chat com profissional</button>
                 </div>    
             </div>
 
             <!--Avaliacoes dos pacientes-->
             <div class="cardsArt" id="avaliacao">
                 <div id="avalTitle">
-                    <h1>Avaliacoes recentes:</h1>
-                    <p>Últimas avaliações feitas sobre o seu perfil</p>
+                    <h1>Avaliações recentes:</h1>
+                    <p>Últimas avaliações que você fez</p>
                 </div>
                 <div id="cardsAval">
-                    <div class="cardsAvaliacao">
-                        <div class="avatar-circle avatarAval" id="sidebarAvatar">--</div>
-                        <div>
-                            <h1>Nome paciente</h1>
-                            <p>Ótimo profissional, me ajudou muito no meu tratamento de ansiedade.</p>
-                        </div>
-                    </div>
-                    <div class="cardsAvaliacao">
-                        <div class="avatar-circle avatarAval" id="sidebarAvatar">--</div>
-                        <div>
-                            <h1>Nome paciente</h1>
-                            <p>Ótimo profissional, me ajudou muito no meu tratamento de ansiedade.</p>
-                        </div>
-                    </div>
-                    <div class="cardsAvaliacao">
-                        <div class="avatar-circle avatarAval" id="sidebarAvatar">--</div>
-                        <div>
-                            <h1>Nome paciente</h1>
-                            <p>Ótimo profissional, me ajudou muito no meu tratamento de ansiedade.</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
-            <!--Resultado das consultas-->
-            <div class="cardsArt cardN" id="resultado">
-                <h2 id="resTitle">Resultado das Consultas</h2>
-                <div id="inRes">
-                    <div class="resultadosC"><h2>3 casos resolvidos</h2></div>
-                    <div class="resultadosC"><h2>3 casos encaminhados</h2></div>
-                    <div class="resultadosC"><h2>3 casos em andamento</h2></div>
-                </div>
+            <!--Última sessão-->
+            <div class="cardsArt cardN" id="sessaoLastCard">
+                <h2 class="sessaoTitle">Última sessão</h2>
+                <div class="inSessao">
+                    <div id="infoNext" class="infoSessao">
+
+                    </div>
+                    <button>Acessar chat com profissional</button>
+                </div>  
             </div>
 
         </article>
     </main>
     <script src="../../assets/js/login.js"></script>
-    <script src="dashboard.js"></script>
+    <script src="dashboardPaciente.js"></script>
 </body>
 </html>

@@ -180,7 +180,7 @@ article{
   margin: 50px 0 0 0;
 }
 .cardsArt{
-  height: 450px;
+  height: 400px;
   margin: 0 20px 0 20px;
 }
 .cardN{
@@ -192,15 +192,26 @@ article{
 /* ═══════════════════════════════════════════
    ARTICLE--BAR CHART
 ═══════════════════════════════════════════ */
-#titleChart{
-  display: flex;
-  margin: 10px 0 10px 30%;
+#resumoCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#btnChart{
+#titleResumo{
+  display: flex;
+  margin: 10px 0 10px 0;
+}
+#textResumo{
   display: flex;
   align-items: center;
   border: solid var(--yellow) 1px;
+  background-color:#ffd50081;
   border-radius: 21px;
+  justify-content: center;
+  text-align: center;
+  width: 60%;
+  margin-top: 40px;
+  height: 200px;
 }
 .selectRange{
   padding: 0 20px 0 20px;
@@ -210,30 +221,32 @@ article{
    ARTICLE--CONQUISTA
 ═══════════════════════════════════════════ */
 
-#conTitle{
+.sessaoTitle{
   margin: 10px 0 0 20px;
 }
-#inConq{
+.inSessao{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin: 5% 20px 10% 20px;
   height: 80%;
-}
-.conMes{
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 5px 20px 5px 20px;
-  
 }
-.conPlus{
-  background-color: #ffd60a93;
-  border-radius: 20px;
+.infoSessao{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
 }
-.conMinus{
-  background-color: #13131338;
-  border-radius: 20px;
+.infoSessao #sidebarAvatar{
+    height: 60px;
+    width: 60px;
+}
+.inSessao button{
+    width: 60%;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 21px;
+    height: 50px;
 }
 
 /* ═══════════════════════════════════════════
@@ -280,4 +293,41 @@ article{
 
 .avatarAval{
   margin-right: 20px;
+}
+
+/* ═══════════════════════════════════════════
+   Emotion Buttons
+═══════════════════════════════════════════ */
+#btnEmocoes{
+  margin-top: 20px;
+}
+#btnEmocoes button{
+  background-color: #ecd870;
+  border: none;
+  border-radius: 21px;
+  height: 30px;
+  width: 60px;
+  margin: 0 10px;
+}
+#btnEmocoes button:hover{
+  background-color: #b89e1c;
+}
+#btnEmocoes button.ativo {
+  background-color: #b89e1c;
+}
+#barraContainer {
+  width: 80%;
+  height: 24px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+#barraProgresso {
+  height: 100%;
+  width: 0%;
+  border-radius: 12px;
+  background-color: #4caf50;
+  transition: width 0.6s ease, background-color 0.4s ease;
 }
