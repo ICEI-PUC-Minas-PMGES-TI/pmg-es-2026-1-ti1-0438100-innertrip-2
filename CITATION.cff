@@ -2,30 +2,29 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: 
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Souza
+    given-names: Vítor
+  - family-names: Soares
+    given-names: João Vitor
+  - family-names: Figueiredo
+    given-names: Arthur
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Barros
+    given-names: Diego 
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Louzada
+    given-names: Henrique 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Lacerda
+    given-names: Lucca Soares
 keywords:
-  - 
-  - 
-repository-code: 
+  - Saúde mental
+  - Psicologia
+  - Vulnerabilidade social
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0438100-innertrip-2
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2022-07-14
