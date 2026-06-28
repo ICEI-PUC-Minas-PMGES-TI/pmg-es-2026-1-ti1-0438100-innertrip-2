@@ -81,6 +81,7 @@ function loginUser (login, senha) {
             usuarioCorrente.id = usuario.id;
             usuarioCorrente.login = usuario.login;
             usuarioCorrente.email = usuario.email;
+            usuarioCorrente.tipoUsuario = usuario.tipoUsuario;
             usuarioCorrente.nome = usuario.nome;
 
             // Salva os dados do usuário corrente no Session Storage, mas antes converte para string
