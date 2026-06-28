@@ -8,9 +8,7 @@ Informações básicas do projeto.
 
   * [Vítor Augusto de Souza](https://github.com/Vitor-vas) 
   * [Arthur Moreira Figueiredo](https://github.com/arthurmoreira-dev)
-  * [João Vitor Portes Rocha Soares](https://github.com/JoaoPortess) 
-  * [Pedro Henrique Nascimento Cézar](https://github.com/pedrohcezar) 
-  * [Lucas Gonçalves Pimenta Silva]() ⚠️ Alterar ⚠️
+  * [João Vitor Portes Rocha Soares](https://github.com/JoaoPortess)  
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -26,8 +24,7 @@ A documentação do projeto é estruturada da seguinte forma:
 
 # Contexto
 
-, o objetivo do nosso projeto é ajudar essas pessoas oferecendo uma plataforma que une principalmente alunos de psicologia
-e essas pessoas, oferecendo um serviço de qualidade e gratuito para as pessoas que precisam e para os alunos iremos oferecer horas complementares necessárias para a formação no curso. 
+O objetivo do trabalho é conectar de forma simples, pessoas à psicólogos de maneira remota permitindo uma maior acessibilidade dos brasileiros a um tratamento psicológico de qualidade. 
 
 ## Problema
 
@@ -41,22 +38,18 @@ que gostariam de fazer trabalho voluntário não têm um canal estruturado para 
 
 ## Objetivos
 
-**✳️✳️✳️ Mente Acessível é uma plataforma web que conecta, de forma direta e segura, pessoas sem acesso a
+**✳️✳️✳️ Psyche é uma plataforma web que conecta, de forma direta e segura, pessoas sem acesso a
 saúde mental a estudantes e profissionais dispostos a atender gratuitamente ou a preço social — tudo
 online, sem deslocamento e sem custo para o usuário.
 A proposta resolve três problemas simultaneamente: a pessoa vulnerável recebe atendimento real e
-qualificado; o estudante ganha prática supervisionada e horas complementares; e a instituição (faculdade
-ou ONG) organiza e valida tudo dentro da própria plataforma. ✳️✳️✳️**
+qualificado; o estudante ganha prática supervisionada e horas complementares; e, em um futuro próximmo as instituições (faculdades
+ou ONGs) organizariam e validariam tudo dentro da própria plataforma. ✳️✳️✳️**
 
 ## Justificativa
 
 **✳️✳️✳️ COLOQUE AQUI O SEU TEXTO ✳️✳️✳️**
+Como já mencionado anteriormente, o acesso à tratamento psicológico ainda é muito restrito para pessoas de baixa renda, pois consultas com psicólogos e psiquiatras giram em torno de R$ 150,00 a R$ 500,00 reais em média (dado fornecido pelo site www.brterapeutas.com.br). Dada a atual situação do país, sabemos que não são todos que possuem condições para arcar com valores desse tipo. O psyche busca viabilizar o tratamento psicológico no Brasil oferecendo consultas de 50 minutos à valores simbólicos ou até mesmo de maneira gratuita, permitindo com que cada vez mais pessoas tenham acesso à tratamento psicológico de qualidade. 
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
->
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
 >
 > **Orientações**:
 >
@@ -187,9 +180,6 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | Hospedagem do site               | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
 | Protótipo Interativo / Wireframe | Figma      | https://www.figma.com/design/GXOGd5YW7pbgMaM1gm4hhd/Psyche?node-id=0-1&p=f&t=wL6hCwPEcL7zmgoz-0 |
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) plataformas de hospedagem, entre outras.
 
 ## Gerenciamento do Projeto
 
