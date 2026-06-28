@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside>
+    <h1>Psyche</h1>
+
+    <a href="#" class="active">Agendamento</a>
+    <a href="#">Consultas</a>
+    <a href="#">Perfil</a>
+    <a href="#">Configurações</a>
+
+    <div class="user">
+      <strong>Usuário</strong>
+      <span>Paciente</span>
+    </div>
+  </aside>
+
+  <main>
+
+    <div class="topo">
+      <div>
+        <h2>Agendar consulta</h2>
+        <p>Preencha seus dados para realizar o agendamento</p>
+      </div>
+
+      <button>Nova consulta</button>
+    </div>
+
+    <div class="grid">
+
+      <div>
+
+        <div class="card">
+          <h3>Dados do paciente</h3>
+
+          <form>
+
+            <label>Nome completo</label>
+            <input type="text" placeholder="Digite seu nome">
+
+            <label>Email</label>
+            <input type="email" placeholder="Digite seu email">
+
+            <label>Telefone</label>
+            <input type="tel" placeholder="(00) 00000-0000">
+
+            <label>Data da consulta</label>
+            <input type="date">
+
+            <label>Horário</label>
+            <select>
+              <option>08:00</option>
+              <option>10:00</option>
+              <option>14:00</option>
+              <option>15:00</option>
+              <option>18:00</option>
+            </select>
+
+            <label>Formato da sessão</label>
+
+            <div class="formatos">
+              <div class="opcao active">
+                Vídeo chamada
+              </div>
+
+              <div class="opcao">
+                Somente áudio
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="card">
+          <h3>Resumo</h3>
+
+          <div class="resumo">
+            <p><strong>Consulta:</strong> Psicoterapia</p>
+            <p><strong>Duração:</strong> 50 minutos</p>
+            <p><strong>Formato:</strong> Online</p>
+          </div>
+
+          <button class="btn-confirmar">
+            Confirmar agendamento
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
