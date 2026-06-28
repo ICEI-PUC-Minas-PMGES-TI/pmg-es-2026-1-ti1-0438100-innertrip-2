@@ -17,7 +17,6 @@
     { label: 'Meus Pacientes', href: '/modulos/cadastro_pacientes/index.html',           icon: 'person'     },
     { label: 'Consultas',      href: '/modulos/consultas/index.html',                    icon: 'file-text'  },
     { label: 'Agendamentos',   href: '#',                                                icon: 'calendar'   },
-    { label: 'Psicólogos',     href: '/modulos/EncontrarPsicologos/psicologos.html',   icon: 'search'     },
     { label: 'Configurações',  href: '#',                                                icon: 'settings'   },
   ];
 
@@ -25,7 +24,6 @@
     { label: 'Dashboard',      href: '/modulos/dashboard/dashboard.html',               icon: 'grid'       },
     { label: 'Meus Pacientes', href: '/modulos/cadastro_pacientes/index.html',           icon: 'person'     },
     { label: 'Consultas',      href: '/modulos/consultas/index.html',                    icon: 'file-text'  },
-    { label: 'Psicólogos',     href: '/modulos/EncontrarPsicologos/psicologos.html',   icon: 'search'     },
     { label: 'Configurações',  href: '#',                                                icon: 'settings'   },
   ];
 
