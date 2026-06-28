@@ -364,6 +364,5 @@
       "id": "5",
       "sentimento": "Exausto"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

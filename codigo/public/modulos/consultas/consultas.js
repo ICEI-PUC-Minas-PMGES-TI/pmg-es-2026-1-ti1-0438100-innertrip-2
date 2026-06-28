@@ -164,7 +164,29 @@ function aplicarFiltros() {
   const hoje   = new Date();
   hoje.setHours(0,0,0,0);
 
+  // 1. Obtém o usuário logado do sessionStorage conforme configurado no teu projeto
+  const dadosUsuario = sessionStorage.getItem('usuarioCorrente');
+  let usuarioLogado = null;
+  if (dadosUsuario) {
+    usuarioLogado = JSON.parse(dadosUsuario);
+  }
+
   consultasFiltradas = todasConsultas.filter(c => {
+    // 2. FILTRO DE PRIVACIDADE BASEADO NO PERFIL
+    if (usuarioLogado) {
+      const tipo = usuarioLogado.tipoUsuario;
+      const idLogado = String(usuarioLogado.id);
+
+      if (tipo === 'psicologo' || tipo === 'estudante') {
+        // Profissionais só veem consultas cujo psicologoID seja igual ao ID deles
+        if (String(c.psicologoID) !== idLogado) return false;
+      } else if (tipo === 'paciente') {
+        // Pacientes só veem consultas cujo pacienteID seja igual ao ID deles
+        if (String(c.pacienteID) !== idLogado) return false;
+      }
+    }
+
+    // 3. Filtros existentes na tua aplicação (Busca por nome, Status, Local, Data)
     const nomePac  = getNomePaciente(c.pacienteID).toLowerCase();
     const nomePsic = getNomePsicologo(c.psicologoID).toLowerCase();
     const matchBusca  = !busca  || nomePac.includes(busca) || nomePsic.includes(busca);
