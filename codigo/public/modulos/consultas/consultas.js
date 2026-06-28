@@ -223,10 +223,16 @@ function aplicarFiltros() {
    CARDS DE RESUMO
 ═══════════════════════════════════════════ */
 function atualizarCards() {
-  setText('totalConsultas',   todasConsultas.length);
-  setText('totalPendentes',   String(todasConsultas.filter(c => c.status === 'pendente').length).padStart(2,'0'));
-  setText('totalConfirmadas', todasConsultas.filter(c => c.status === 'confirmado').length);
-  setText('totalConcluidas',  todasConsultas.filter(c => c.status === 'concluido').length);
+const totalSessoes    = consultasFiltradas.length;
+  const totalPendentes  = consultasFiltradas.filter(c => c.status === 'pendente').length;
+  const totalConfirmadas = consultasFiltradas.filter(c => c.status === 'confirmado').length;
+  const totalConcluidas  = consultasFiltradas.filter(c => c.status === 'concluido').length;
+
+  // Injeta os valores reais do usuário nos elementos do HTML
+  setText('totalConsultas',   totalSessoes);
+  setText('totalPendentes',   String(totalPendentes).padStart(2, '0'));
+  setText('totalConfirmadas', totalConfirmadas);
+  setText('totalConcluidas',  totalConcluidas);
 }
 
 function setText(id, val) {
@@ -239,6 +245,8 @@ function setText(id, val) {
 ═══════════════════════════════════════════ */
 function renderizarTabela() {
   const tbody  = document.getElementById('consultasBody');
+  if (!tbody) return;
+
   const inicio = (paginaAtual - 1) * POR_PAGINA;
   const pagina = consultasFiltradas.slice(inicio, inicio + POR_PAGINA);
 
@@ -258,6 +266,7 @@ function renderizarTabela() {
       ? '<span class="tag-remoto">Remoto</span>'
       : '';
 
+    // CORREÇÃO: Colocamos '${c.id}' entre aspas simples para garantir que IDs string ou recém-criados funcionem perfeitamente no onclick
     return `<tr>
       <td class="row-num">${num}</td>
       <td>
@@ -269,9 +278,9 @@ function renderizarTabela() {
       <td>${esc(c.local || '—')}</td>
       <td>${badge}</td>
       <td class="actions-cell">
-        <button class="btn-ver"  onclick="verDetalhes(${c.id})">Ver ›</button>
-        <button class="btn-edit" onclick="abrirModalEditar(${c.id})" title="Editar">✏️</button>
-        <button class="btn-del"  onclick="excluirConsulta(${c.id})" title="Excluir">🗑</button>
+        <button class="btn-ver"  onclick="verDetalhes('${c.id}')">Ver ›</button>
+        <button class="btn-edit" onclick="abrirModalEditar('${c.id}')" title="Editar">✏️</button>
+        <button class="btn-del"  onclick="excluirConsulta('${c.id}')" title="Excluir">🗑</button>
       </td>
     </tr>`;
   }).join('');
@@ -366,9 +375,9 @@ function abrirModalNova() {
 }
 
 function abrirModalEditar(id) {
-  const c = todasConsultas.find(x => x.id === id);
+  const c = todasConsultas.find(x => String(x.id) === String(id));
   if (!c) return;
-  editandoId = id;
+  editandoId = id; // Mantém o ID correto para o PUT
   document.getElementById('modalTitle').textContent = 'Editar Consulta';
   document.getElementById('modalPacienteID').value  = c.pacienteID  || '';
   document.getElementById('modalPsicologoID').value = c.psicologoID || '';
@@ -451,7 +460,8 @@ function excluirConsulta(id) {
    VER DETALHES
 ═══════════════════════════════════════════ */
 function verDetalhes(id) {
-  const c = todasConsultas.find(x => x.id === id);
+  // Conversão para String garante que ache tanto id numérico quanto textual
+  const c = todasConsultas.find(x => String(x.id) === String(id));
   if (!c) return;
   const paciente = getNomePaciente(c.pacienteID);
   const idade    = getIdadePaciente(c.pacienteID);
