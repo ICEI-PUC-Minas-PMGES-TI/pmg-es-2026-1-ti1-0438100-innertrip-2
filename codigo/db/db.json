@@ -186,6 +186,28 @@
       ],
       "consultasId": [],
       "id_quadro": "1"
+    },
+    {
+      "login": "Adolfo",
+      "senha": "123456",
+      "tipoUsuario": "paciente",
+      "nome": "Adolfo",
+      "sobrenome": "Torres",
+      "nascimento": "2026-06-30",
+      "cpf": "109.766.186-56",
+      "enderecoResidencial": {
+        "logradouro": "Rua Tereza",
+        "tipoLogradouro": "casa",
+        "cep": "12312-312"
+      },
+      "contato": {
+        "email": "dodo@gmail.com",
+        "telefone": "(31) 91234-1234",
+        "instagran": "@dodo",
+        "linkedin": "@dodo"
+      },
+      "id_quadro": "2",
+      "id": "jhdxmEzVRxw"
     }
   ],
   "consultas": [
@@ -272,18 +294,6 @@
       "avaliacao": "",
       "notas": "",
       "id": "RjYeN111OE8"
-    },
-    {
-      "pacienteID": "3",
-      "psicologoID": 1,
-      "data_hora": "2026-06-30T08:00",
-      "local": "teste teste",
-      "status": "pendente",
-      "modalidade": "remoto",
-      "duracao": 1,
-      "avaliacao": "",
-      "notas": "",
-      "id": "sy8C4upsXNE"
     }
   ],
   "Postagens": [

@@ -1,13 +1,3 @@
-/**
- * PSYCHE — Dashboard Psicologo
- * Autor: Vitor Augusto de Souza
- *
- * Funcionalidades:
- *  - Exibe nome e iniciais do usuário logado
- *  - Carrega estatísticas via API REST (JSON Server)
- *  - Exibe avaliações das consultas do usuário logado
- */
- 
 const API_USUARIOS  = '/usuarios';
 const API_CONSULTAS = '/consultas';
  
@@ -100,6 +90,7 @@ function carregarDados(session) {
     atualizarAvaliacoes(consultas, usuarios, usuarioCompleto);
     atualizarSubtituloDashboard(consultas, usuarioCompleto);
     atualizarConquista(usuarios, usuarioCompleto);
+    atualizarMeusPacientes(usuarios, usuarioCompleto);
 
     console.log('Usuários:', usuarios);
     console.log('Consultas:', consultas);
@@ -256,3 +247,47 @@ function atualizarSubtituloDashboard(consultas, usuarioCompleto) {
     `Você trabalhou ${totalHoras}h e atende ${totalPacientes} paciente${totalPacientes !== 1 ? 's' : ''} no total.`;
 }
 
+/* ═══════════════════════════════════════════
+   MEUS PACIENTES ATENDIDOS
+═══════════════════════════════════════════ */
+function atualizarMeusPacientes(usuarios, usuarioCompleto) {
+  const container = document.getElementById('listaPacientes');
+  if (!container) return;
+
+  // Garante que o container comece vazio
+  container.innerHTML = '';
+
+  // Verifica se o psicólogo possui pacientes vinculados
+  if (usuarioCompleto && Array.isArray(usuarioCompleto.pacientesId) && usuarioCompleto.pacientesId.length > 0) {
+    
+    container.innerHTML = usuarioCompleto.pacientesId.map(pacienteID => {
+      // Procura o usuário correspondente ao ID (convertendo ambos para String)
+      const paciente = usuarios.find(u => String(u.id) === String(pacienteID));
+      
+      if (!paciente) return '';
+
+      const nomePaciente = `${paciente.nome} ${paciente.sobrenome || ''}`.trim();
+      const emailPaciente = paciente.contato?.email || 'Sem e-mail cadastrado';
+      
+      // Gera as iniciais do nome do paciente para o avatar
+      const iniciais = nomePaciente
+        .split(' ')
+        .slice(0, 2)
+        .map(n => n[0])
+        .join('')
+        .toUpperCase();
+
+      return `
+        <div class="cardsAvaliacao" style="margin-bottom: 2px;  padding-bottom: 8px; display: flex; align-items: center; gap: 12px;">
+          <div class="avatar-circle avatarAval" style="width: 40px; height: 40px; font-size: 14px; flex-shrink: 0;">${iniciais}</div>
+          <div>
+            <h1 style="font-size: 20px; font-weight: 600; margin: 0; color: #333;">${nomePaciente}</h1>
+            <p style="font-size: 12px; color: #777; margin: 2px 0 0 0;">${emailPaciente}</p>
+          </div>
+        </div>`;
+    }).join('');
+
+  } else {
+    container.innerHTML = '<p style="color:#888; font-style: italic; font-size: 14px;">Nenhum paciente vinculado ao seu perfil ainda.</p>';
+  }
+}

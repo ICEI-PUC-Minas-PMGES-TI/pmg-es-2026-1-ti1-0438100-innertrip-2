@@ -1,14 +1,3 @@
-/**
- * PSYCHE — Sidebar Reutilizável
- * Injeta a sidebar padrão em qualquer <aside class="sidebar">
- * e preenche nome/iniciais do usuário logado via sessionStorage.
- *
- * Como usar em qualquer página:
- *   1. Adicione <aside class="sidebar" id="sidebar"></aside> no HTML
- *   2. Inclua <script src="CAMINHO/assets/js/sidebar.js"></script>
- *   3. Inclua <link rel="stylesheet" href="CAMINHO/assets/css/sidebar.css">
- */
-
 (function () {
 
   /* ── Mapa de links por tipoUsuario ── */
@@ -16,14 +5,12 @@
     { label: 'Dashboard',      href: '/modulos/dashboard/dashboard.html',                icon: 'grid'       },
     { label: 'Meus Pacientes', href: '/modulos/cadastro_pacientes/index.html',           icon: 'person'     },
     { label: 'Consultas',      href: '/modulos/consultas/index.html',                    icon: 'file-text'  },
-    { label: 'Configurações',  href: '#',                                                icon: 'settings'   },
   ];
 
   const NAV_ESTUDANTE = [
     { label: 'Dashboard',      href: '/modulos/dashboard/dashboard.html',                icon: 'grid'       },
     { label: 'Meus Pacientes', href: '/modulos/cadastro_pacientes/index.html',           icon: 'person'     },
     { label: 'Consultas',      href: '/modulos/consultas/index.html',                    icon: 'file-text'  },
-    { label: 'Configurações',  href: '#',                                                icon: 'settings'   },
   ];
 
   const NAV_PACIENTE = [
@@ -31,12 +18,10 @@
     { label: 'Consultas',      href: '/modulos/consultas/index.html',                     icon: 'file-text' },
     { label: 'Psicólogos',     href: '/modulos/EncontrarPsicologos/psicologos.html',      icon: 'search'    },
     { label: 'Agendamentos',   href: '/modulos/agendamento_de_consultas/index.html',      icon: 'calendar'   },
-    { label: 'Configurações',  href: '#',                                                 icon: 'settings'  },
   ];
 
   const NAV_FACULDADE = [
     { label: 'Dashboard',      href: '/modulos/dashboard/dashboard.html',   icon: 'grid'     },
-    { label: 'Configurações',  href: '#',                                   icon: 'settings' },
   ];
 
   /* ── Ícones SVG ── */

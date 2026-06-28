@@ -1,19 +1,7 @@
-/**
- * PSYCHE — Agendamento de Consulta
- * - Somente pacientes podem acessar
- * - Pré-preenche dados do paciente logado
- * - Pré-preenche psicólogo se veio de ?psicologoId=X
- * - Salva via POST /consultas
- */
-
 const API_USUARIOS  = '/usuarios';
 const API_CONSULTAS = '/consultas';
 
 let formatoSelecionado = 'remoto';
-
-/* ═══════════════════════════════════════════
-   INICIALIZAÇÃO
-═══════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   const session = verificarAcesso();
   if (!session) return;
@@ -25,10 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.btn-confirmar')
     .addEventListener('click', confirmarAgendamento);
 });
-
-/* ═══════════════════════════════════════════
-   VERIFICAR ACESSO — somente pacientes
-═══════════════════════════════════════════ */
 function verificarAcesso() {
   const raw = sessionStorage.getItem('usuarioCorrente');
   if (!raw) {
@@ -59,9 +43,6 @@ function verificarAcesso() {
   return session;
 }
 
-/* ═══════════════════════════════════════════
-   PRÉ-PREENCHE DADOS DO PACIENTE
-═══════════════════════════════════════════ */
 function preencherDadosPaciente(session) {
   fetch(`${API_USUARIOS}/${session.id}`)
     .then(r => r.json())
@@ -76,10 +57,6 @@ function preencherDadosPaciente(session) {
     });
 }
 
-/* ═══════════════════════════════════════════
-   CARREGA PSICÓLOGOS E ESTUDANTES
-   e pré-seleciona + preenche card se vier ?psicologoId=X
-═══════════════════════════════════════════ */
 function carregarPsicologos() {
   const params   = new URLSearchParams(window.location.search);
   const idPreSel = params.get('psicologoId');
@@ -121,9 +98,6 @@ function carregarPsicologos() {
   .catch(err => console.error('[PSYCHE] Erro ao carregar profissionais:', err));
 }
 
-/* ═══════════════════════════════════════════
-   CARD DO PSICÓLOGO SELECIONADO
-═══════════════════════════════════════════ */
 function preencherCardPsicologo(p) {
   const nomeCompleto = `${p.nome || ''} ${p.sobrenome || ''}`.trim();
   const iniciais     = nomeCompleto.split(' ').slice(0,2).map(n => n[0]).join('').toUpperCase();
@@ -148,9 +122,6 @@ function limparCardPsicologo() {
 const ESPECIALIZACOES = { 1:'Escolar', 2:'Geral', 3:'Emocional', 4:'Infanto-juvenil' };
 function getEspecializacao(id) { return ESPECIALIZACOES[id] || 'Geral'; }
 
-/* ═══════════════════════════════════════════
-   FORMATO DA SESSÃO
-═══════════════════════════════════════════ */
 function configurarFormatos() {
   document.querySelectorAll('.opcao').forEach(el => {
     el.addEventListener('click', () => {
@@ -162,9 +133,6 @@ function configurarFormatos() {
   });
 }
 
-/* ═══════════════════════════════════════════
-   RESUMO AO VIVO
-═══════════════════════════════════════════ */
 function atualizarResumo() {
   const data    = document.getElementById('inputData')?.value;
   const horario = document.getElementById('selectHorario')?.value;
@@ -182,9 +150,6 @@ function formatarData(str) {
   return `${d}/${m}/${y}`;
 }
 
-/* ═══════════════════════════════════════════
-   CONFIRMAR — POST /consultas
-═══════════════════════════════════════════ */
 function confirmarAgendamento() {
   const session     = JSON.parse(sessionStorage.getItem('usuarioCorrente') || '{}');
   const psicologoId = document.getElementById('selectPsicologo')?.value;
@@ -226,9 +191,6 @@ function confirmarAgendamento() {
   .finally(() => { btn.disabled = false; btn.textContent = 'Confirmar agendamento'; });
 }
 
-/* ═══════════════════════════════════════════
-   HELPERS
-═══════════════════════════════════════════ */
 function setVal(id, val)  { const el = document.getElementById(id); if (el) el.value       = val; }
 function setTxt(id, val)  { const el = document.getElementById(id); if (el) el.textContent = val; }
 function setHTML(id, val) { const el = document.getElementById(id); if (el) el.innerHTML   = val; }
