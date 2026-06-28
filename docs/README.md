@@ -232,13 +232,14 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+> ![Dashbord](docs/images/WhatsApp Image 2026-06-28 at 8.31.08 PM.jpeg)
+![Lista_de_consultas: pemite o usuário a consultar suas consultas](docs/images/WhatsApp Image 2026-06-28 at 8.31.34 PM.jpeg)
+![Encontrar_psicólogos: permite o usuário a encontrat psicólogos cadastrados na plataforma](docs/images/WhatsApp Image 2026-06-28 at 8.32.23 PM.jpeg)
+![Agendar_consultas: Permite o usuário a agendar consultas](docs/images/WhatsApp Image 2026-06-28 at 8.32.47 PM.jpeg)
+![Tela_de_login: Serve para fazer login em sua conta no spyche](docs/images/WhatsApp Image 2026-06-28 at 8.33.03 PM.jpeg)
+![Cirar_conta_psyche: Serve para criar conta na plataforma](docs/images/WhatsApp Image 2026-06-28 at 8.33.13 PM.jpeg)
+![Dashbord](docs/images/WhatsApp Image 2026-06-28 at 8.33.47 PM.jpeg)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
 
 ## Estruturas de Dados
 
@@ -377,11 +378,11 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 As referências utilizadas no trabalho foram:
 
 * SOBRENOME, Nome do autor. Título da obra. 8. ed. Cidade: Editora, 2000. 287 p ⚠️ EXEMPLO ⚠️
+>
+(https://www.brterapeutas.com.br/blog/tabela-precos-terapias-autismo-brasil)
+https://amb.org.br/apenas-5-dos-brasileiros-fazem-terapia-mas-1-a-cada-6-usam-medicamentos-mostra-pesquisa-inedita-sobre-saude-mental/
+https://www2.cfp.org.br/infografico/quantos-somos/
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
->
 > **Orientações**:
 >
 > - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
