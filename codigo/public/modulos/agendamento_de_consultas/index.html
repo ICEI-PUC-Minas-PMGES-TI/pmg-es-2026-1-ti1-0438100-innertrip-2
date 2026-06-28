@@ -3,105 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agendamento</title>
+  <title>PSYCHE – Agendamento</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../assets/css/sidebar.css">
 </head>
 <body>
-
-  <aside>
-    <h1>Psyche</h1>
-
-    <a href="#" class="active">Agendamento</a>
-    <a href="#">Consultas</a>
-    <a href="#">Perfil</a>
-    <a href="#">Configurações</a>
-
-    <div class="user">
-      <strong>Usuário</strong>
-      <span>Paciente</span>
-    </div>
-  </aside>
+  <aside class="sidebar" id="sidebar"></aside>
 
   <main>
-
     <div class="topo">
       <div>
         <h2>Agendar consulta</h2>
         <p>Preencha seus dados para realizar o agendamento</p>
       </div>
-
-      <button>Nova consulta</button>
+      <button onclick="window.location.href='/modulos/consultas/index.html'">
+        Ver minhas consultas
+      </button>
     </div>
 
     <div class="grid">
 
-      <div>
+      <!-- ── COLUNA ESQUERDA: formulário ── -->
+      <div class="coluna-form">
 
+        <!-- Card: dados do paciente (preenchido automaticamente) -->
         <div class="card">
           <h3>Dados do paciente</h3>
-
-          <form>
-
+          <form onsubmit="return false">
             <label>Nome completo</label>
-            <input type="text" placeholder="Digite seu nome">
+            <input type="text" id="inputNome" placeholder="Carregando..." readonly>
 
             <label>Email</label>
-            <input type="email" placeholder="Digite seu email">
+            <input type="email" id="inputEmail" placeholder="Carregando..." readonly>
 
             <label>Telefone</label>
-            <input type="tel" placeholder="(00) 00000-0000">
-
-            <label>Data da consulta</label>
-            <input type="date">
-
-            <label>Horário</label>
-            <select>
-              <option>08:00</option>
-              <option>10:00</option>
-              <option>14:00</option>
-              <option>15:00</option>
-              <option>18:00</option>
-            </select>
-
-            <label>Formato da sessão</label>
-
-            <div class="formatos">
-              <div class="opcao active">
-                Vídeo chamada
-              </div>
-
-              <div class="opcao">
-                Somente áudio
-              </div>
-            </div>
-
+            <input type="tel" id="inputTelefone" placeholder="Carregando..." readonly>
           </form>
         </div>
 
-      </div>
-
-      <div>
-
-        <div class="card">
-          <h3>Resumo</h3>
-
-          <div class="resumo">
-            <p><strong>Consulta:</strong> Psicoterapia</p>
-            <p><strong>Duração:</strong> 50 minutos</p>
-            <p><strong>Formato:</strong> Online</p>
+        <!-- Card: dados do psicólogo selecionado (aparece quando selecionado) -->
+        <div class="card" id="cardPsicologo" style="display:none; margin-top:16px;">
+          <h3>Profissional selecionado</h3>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;">
+            <div class="avatar-circle" id="psicAvatar" style="width:44px;height:44px;font-size:14px;">--</div>
+            <div>
+              <strong id="psicNome">—</strong><br>
+              <span id="psicCrp" style="font-size:12px; color:#6B6B6B;"></span>
+            </div>
           </div>
-
-          <button class="btn-confirmar">
-            Confirmar agendamento
-          </button>
-
+          <p><strong>Especialidade:</strong> <span id="psicEsp">—</span></p>
+          <p><strong>Horário disponível:</strong> <span id="psicHorario">—</span></p>
+          <p><strong>Email:</strong> <span id="psicEmail">—</span></p>
+          <p><strong>Telefone:</strong> <span id="psicTelefone">—</span></p>
         </div>
 
       </div>
 
-    </div>
+      <!-- ── COLUNA DIREITA: seleção + resumo ── -->
+      <div class="coluna-resumo">
+        <div class="card">
+          <h3>Detalhes do agendamento</h3>
+          <form onsubmit="return false">
 
+            <label>Profissional</label>
+            <select id="selectPsicologo">
+              <option value="">Carregando profissionais...</option>
+            </select>
+
+            <label>Data da consulta</label>
+            <input type="date" id="inputData">
+
+            <label>Horário</label>
+            <select id="selectHorario">
+              <option value="08:00">08:00</option>
+              <option value="09:00">09:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="18:00">18:00</option>
+            </select>
+
+            <label>Local</label>
+            <input type="text" id="inputLocal" placeholder="Ex: Clínica Central, Online...">
+
+            <label>Formato da sessão</label>
+            <div class="formatos">
+              <div class="opcao active" data-formato="remoto">Vídeo chamada</div>
+              <div class="opcao" data-formato="presencial">Presencial</div>
+            </div>
+
+          </form>
+
+          <!-- Resumo -->
+          <div class="resumo" style="margin-top:20px;">
+            <h3>Resumo</h3>
+            <p><strong>Consulta:</strong> Psicoterapia</p>
+            <p><strong>Data:</strong> <span id="resumoData">—</span></p>
+            <p><strong>Horário:</strong> <span id="resumoHorario">—</span></p>
+            <p><strong>Formato:</strong> <span id="resumoFormato">Online</span></p>
+            <p><strong>Local:</strong> <span id="resumoLocal">—</span></p>
+          </div>
+
+          <button class="btn-confirmar" style="margin-top:20px; width:100%;">
+            Confirmar agendamento
+          </button>
+        </div>
+      </div>
+
+    </div>
   </main>
 
+  <div id="toast" class="toast"></div>
+
+  <script src="../../assets/js/login.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+  <script src="agendamento.js"></script>
+
+  <style>
+    .toast {
+      display: none; position: fixed;
+      bottom: 24px; right: 24px;
+      padding: 12px 20px; border-radius: 8px;
+      font-weight: 600; z-index: 9999;
+    }
+    .toast.show { display: block; }
+    .coluna-form, .coluna-resumo { display: flex; flex-direction: column; }
+  </style>
 </body>
 </html>

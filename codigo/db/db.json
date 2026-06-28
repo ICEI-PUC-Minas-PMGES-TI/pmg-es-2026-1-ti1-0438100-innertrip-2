@@ -1,318 +1,369 @@
 {
-    "usuarios": [
-        {
-            "id": 1,
-            "tipoUsuario": "psicologo",
-            "nome": "Pedro",
-            "sobrenome": "Cezar",
-            "login": "Pedro",
-            "senha": "12345",
-            "crp": "00/00000000000",
-            "nascimento": "new Date()",
-            "cpf": "123.456.78",
-            "enderecoResidencial": {
-                "logradouro": "Rua Subida",
-                "tipoLogradouro": "casa",
-                "cep": "12.123.456"
-            },
-            "contato": {
-                "email": "psicologo1@gmail.com",
-                "telefone": "91234-1234",
-                "instagran": "@pedrocezar",
-                "linkedin": "@pedrocezar"
-            },
-            "perfil": {
-                "visitasPerfilMes": 32,
-                "conexoes": 4,
-                "solicitacoes": 2,
-                "biografia": "",
-                "horarioAtivo": "08:00-17:00"
-            },
-            "statusCasos": {
-                "resolvidos": 3,
-                "encaminhados": 2,
-                "andamento": 1
-            },
-            "pacientesId": [
-                3,
-                5
-            ],
-            "consultasId": [
-                1,
-                2
-            ],
-            "id_especializacao": 1
-        },
-        {
-            "id": 2,
-            "tipoUsuario": "estudante",
-            "nome": "Victor",
-            "sobrenome": "Corradi",
-            "login": "Victor",
-            "senha": "senha",
-            "crp": "",
-            "idInstituicao": 4,
-            "nascimento": "new Date()",
-            "cpf": "123.456.78",
-            "enderecoResidencial": {
-                "logradouro": "Rua Descida",
-                "tipoLogradouro": "apartamento",
-                "cep": "12.123.456"
-            },
-            "contato": {
-                "email": "psicologo1@gmail.com",
-                "telefone": "91234-1234",
-                "instagran": "@vitorc",
-                "linkedin": "@vitorc"
-            },
-            "perfil": {
-                "visitasPerfilMes": 32,
-                "conexoes": 4,
-                "solicitacoes": 2,
-                "biografia": "",
-                "horarioAtivo": "08:00-17:00"
-            },
-            "statusCasos": {
-                "resolvidos": 0,
-                "encaminhados": 0,
-                "andamento": 1
-            },
-            "pacientesId": [],
-            "consultasId": [],
-            "id_especializacao": "2"
-        },
-        {
-            "id": 3,
-            "tipoUsuario": "paciente",
-            "nome": "Arthur",
-            "sobrenome": "Moreira",
-            "login": "Arthur",
-            "senha": "12345",
-            "nascimento": "new Date()",
-            "cpf": "123.456.78",
-            "mesPsicologoId": {
-                "1": "Janeiro"
-            },
-            "enderecoResidencial": {
-                "logradouro": "Rua Descida",
-                "tipoLogradouro": "apartamento",
-                "cep": "12.123.456"
-            },
-            "contato": {
-                "email": "paciente@gmail.com",
-                "telefone": "91234-1234",
-                "telefoneEmergencia": "91234-1234",
-                "instagran": "@arth",
-                "linkedin": "@arth"
-            },
-            "perfil": {
-                "visitasPerfilMes": 32,
-                "conexoes": 4,
-                "solicitacoes": 2,
-                "biografia": ""
-            },
-            "humorDiaMes": [
-                1,1,1,2,1,1,2,2,1,1,1,3,3,4,1
-            ],
-            "id_quadro": "1"
-        },
-        {
-            "id": 4,
-            "tipoUsuario": "faculdade",
-            "nome": "PUC",
-            "login": "Puc",
-            "senha": "senha",
-            "cnpj": "12.345.678/0001-00",
-            "email": "faculdade@gmail.com",
-            "telefone": "91234-1234"
-        },
-        {
-            "id": 5,
-            "tipoUsuario": "paciente",
-            "nome": "Vitor",
-            "sobrenome": "Souza",
-            "login": "Vitor",
-            "senha": "senha",
-            "nascimento": "new Date()",
-            "cpf": "123.456.78",
-            "enderecoResidencial": {
-                "logradouro": "Rua Descida",
-                "tipoLogradouro": "apartamento",
-                "cep": "12.123.456"
-            },
-            "contato": {
-                "email": "paciente@gmail.com",
-                "telefone": "91234-1234",
-                "telefoneEmergencia": "91234-1234",
-                "instagran": "@arth",
-                "linkedin": "@arth"
-            },
-            "perfil": {
-                "visitasPerfilMes": 32,
-                "conexoes": 4,
-                "solicitacoes": 2,
-                "biografia": ""
-            },
-            "humorDiaMes": [
-                1,1,1,2,1,1,2,2,1,1,1,3,3,4,1
-            ],
-            
-            "consultasId": [],
-            "id_quadro": "1"
-        }
-    ],
-    "consultas": [
-        {
-            "id": 1,
-            "pacienteID": 3,
-            "psicologoID": 1,
-            "data_hora": "2026-06-20T09:00",
-            "local": "Biblioteca Comunitária",
-            "status": "confirmado",
-            "modalidade": "presencial",
-            "avaliacao": "Ótimo profissional, me ajudou muito no meu tratamento de ansiedade.",
-            "duracao": 3,
-            "notas": ""
-        },
-        {
-            "id": 2,
-            "pacienteID": 3,
-            "psicologoID": 1,
-            "data_hora": "2026-06-20T09:00",
-            "local": "Biblioteca Comunitária",
-            "status": "confirmado",
-            "modalidade": "presencial",
-            "avaliacao": "Ótimo profissional, me ajudou muito no meu tratamento de depressao.",
-            "duracao": 2,
-            "notas": ""
-        },
-        {
-            "id": 3,
-            "pacienteID": 3,
-            "psicologoID": 1,
-            "data_hora": "2026-06-22T15:00",
-            "local": "Biblioteca Comunitária",
-            "status": "pendente",
-            "modalidade": "presencial",
-            "duracao": 2,
-            "avaliacao": "",
-            "notas": "Aguardando confirmação de horário."
-        },
-        {
-            "id": 4,
-            "pacienteID": 5,
-            "psicologoID": 1,
-            "data_hora": "2026-06-22T15:00",
-            "local": "Comodidade",
-            "status": "pendente",
-            "modalidade": "remoto",
-            "avaliacao": "",
-            "duracao": 2,
-            "notas": ""
-        },
-        {
-            "id": 5,
-            "pacienteID": 3,
-            "psicologoID": 1,
-            "data_hora": "2026-06-22T15:00",
-            "local": "Extensão",
-            "status": "cancelado",
-            "modalidade": "presencial",
-            "avaliacao": "",
-            "duracao": 2,
-            "notas": "Paciente remarcou para semana seguinte."
-        },
-        {
-            "id": 6,
-            "pacienteID": 3,
-            "psicologoID": 1,
-            "data_hora": "2026-05-14T10:00",
-            "local": "Clínica Central",
-            "status": "concluido",
-            "modalidade": "presencial",
-            "avaliacao": "",
-            "duracao": 2,
-            "notas": "Sessão concluída com sucesso."
-        }
-    ],
-    "Postagens": [
-        {
-            "id": 0,
-            "tipoPostagem": "dicas",
-            "titulo": "Postagem 1",
-            "descricao": "esse texto e a descricao da dica",
-            "categoria": "",
-            "prioridade": "alta",
-            "imagem": "",
-            "idPsicologo": ""
-
-        },
-        {
-            "id": 1,
-            "tipoPostagem": "apoio",
-            "titulo": "Postagem de apoio",
-            "mensagem": "esse texto e a mensagem de apoio",
-            "categoriaId": "",
-            "data": "new Date()",
-            "idPsicologo": ""
-        }
-    ],
-    "Especializacoes": [
-        {
-            "id": 1,
-            "area": "escolar"
-        },
-        {
-            "id": 2,
-            "area": "geral"
-        },
-        {
-            "id": 3,
-            "area": "emocional"
-        },
-        {
-            "id": 4,
-            "area": "infanto-juvenil"
-        }
-    ],
-    "Quadros": [
-        {
-            "id": 1,
-            "area": "aprendizado"
-        },
-        {
-            "id": 2,
-            "area": "geral"
-        },
-        {
-            "id": 3,
-            "area": "saude-mental"
-        },
-        {
-            "id": 4,
-            "area": "infanto-juvenil"
-        }
-    ],
-    "humor":[
-        {
-            "id": 1,
-            "sentimento": "Feliz"
-        },
-        {
-            "id": 2,
-            "sentimento": "Triste"
-        },
-        {
-            "id": 3,
-            "sentimento": "Ansioso"
-        },
-        {
-            "id": 4,
-            "sentimento": "Raiva"
-        },
-        {
-            "id": 5,
-            "sentimento": "Exausto"
-        }
-    ]
+  "usuarios": [
+    {
+      "id": "1",
+      "tipoUsuario": "psicologo",
+      "nome": "Pedro",
+      "sobrenome": "Cezar",
+      "login": "Pedro",
+      "senha": "12345",
+      "crp": "00/00000000000",
+      "nascimento": "new Date()",
+      "cpf": "123.456.78",
+      "enderecoResidencial": {
+        "logradouro": "Rua Subida",
+        "tipoLogradouro": "casa",
+        "cep": "12.123.456"
+      },
+      "contato": {
+        "email": "psicologo1@gmail.com",
+        "telefone": "91234-1234",
+        "instagran": "@pedrocezar",
+        "linkedin": "@pedrocezar"
+      },
+      "perfil": {
+        "visitasPerfilMes": 32,
+        "conexoes": 4,
+        "solicitacoes": 2,
+        "biografia": "",
+        "horarioAtivo": "08:00-17:00"
+      },
+      "statusCasos": {
+        "resolvidos": 3,
+        "encaminhados": 2,
+        "andamento": 1
+      },
+      "pacientesId": [
+        3,
+        5
+      ],
+      "consultasId": [
+        1,
+        2
+      ],
+      "id_especializacao": 1
+    },
+    {
+      "id": "2",
+      "tipoUsuario": "estudante",
+      "nome": "Victor",
+      "sobrenome": "Corradi",
+      "login": "Victor",
+      "senha": "senha",
+      "crp": "",
+      "idInstituicao": 4,
+      "nascimento": "new Date()",
+      "cpf": "123.456.78",
+      "enderecoResidencial": {
+        "logradouro": "Rua Descida",
+        "tipoLogradouro": "apartamento",
+        "cep": "12.123.456"
+      },
+      "contato": {
+        "email": "psicologo1@gmail.com",
+        "telefone": "91234-1234",
+        "instagran": "@vitorc",
+        "linkedin": "@vitorc"
+      },
+      "perfil": {
+        "visitasPerfilMes": 32,
+        "conexoes": 4,
+        "solicitacoes": 2,
+        "biografia": "",
+        "horarioAtivo": "08:00-17:00"
+      },
+      "statusCasos": {
+        "resolvidos": 0,
+        "encaminhados": 0,
+        "andamento": 1
+      },
+      "pacientesId": [],
+      "consultasId": [],
+      "id_especializacao": "2"
+    },
+    {
+      "id": "3",
+      "tipoUsuario": "paciente",
+      "nome": "Arthur",
+      "sobrenome": "Moreira",
+      "login": "Arthur",
+      "senha": "12345",
+      "nascimento": "new Date()",
+      "cpf": "123.456.78",
+      "mesPsicologoId": {
+        "1": "Janeiro"
+      },
+      "enderecoResidencial": {
+        "logradouro": "Rua Descida",
+        "tipoLogradouro": "apartamento",
+        "cep": "12.123.456"
+      },
+      "contato": {
+        "email": "paciente@gmail.com",
+        "telefone": "91234-1234",
+        "telefoneEmergencia": "91234-1234",
+        "instagran": "@arth",
+        "linkedin": "@arth"
+      },
+      "perfil": {
+        "visitasPerfilMes": 32,
+        "conexoes": 4,
+        "solicitacoes": 2,
+        "biografia": ""
+      },
+      "humorDiaMes": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        3,
+        3,
+        4,
+        1
+      ],
+      "id_quadro": "1"
+    },
+    {
+      "id": "4",
+      "tipoUsuario": "faculdade",
+      "nome": "PUC",
+      "login": "Puc",
+      "senha": "senha",
+      "cnpj": "12.345.678/0001-00",
+      "email": "faculdade@gmail.com",
+      "telefone": "91234-1234"
+    },
+    {
+      "id": "5",
+      "tipoUsuario": "paciente",
+      "nome": "Vitor",
+      "sobrenome": "Souza",
+      "login": "Vitor",
+      "senha": "senha",
+      "nascimento": "new Date()",
+      "cpf": "123.456.78",
+      "enderecoResidencial": {
+        "logradouro": "Rua Descida",
+        "tipoLogradouro": "apartamento",
+        "cep": "12.123.456"
+      },
+      "contato": {
+        "email": "paciente@gmail.com",
+        "telefone": "91234-1234",
+        "telefoneEmergencia": "91234-1234",
+        "instagran": "@arth",
+        "linkedin": "@arth"
+      },
+      "perfil": {
+        "visitasPerfilMes": 32,
+        "conexoes": 4,
+        "solicitacoes": 2,
+        "biografia": ""
+      },
+      "humorDiaMes": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        3,
+        3,
+        4,
+        1
+      ],
+      "consultasId": [],
+      "id_quadro": "1"
+    }
+  ],
+  "consultas": [
+    {
+      "id": "1",
+      "pacienteID": 3,
+      "psicologoID": 1,
+      "data_hora": "2026-06-20T09:00",
+      "local": "Biblioteca Comunitária",
+      "status": "confirmado",
+      "modalidade": "presencial",
+      "avaliacao": "Ótimo profissional, me ajudou muito no meu tratamento de ansiedade.",
+      "duracao": 3,
+      "notas": ""
+    },
+    {
+      "id": "2",
+      "pacienteID": 3,
+      "psicologoID": 1,
+      "data_hora": "2026-06-20T09:00",
+      "local": "Biblioteca Comunitária",
+      "status": "confirmado",
+      "modalidade": "presencial",
+      "avaliacao": "Ótimo profissional, me ajudou muito no meu tratamento de depressao.",
+      "duracao": 2,
+      "notas": ""
+    },
+    {
+      "id": "3",
+      "pacienteID": 3,
+      "psicologoID": 1,
+      "data_hora": "2026-06-22T15:00",
+      "local": "Biblioteca Comunitária",
+      "status": "pendente",
+      "modalidade": "presencial",
+      "duracao": 2,
+      "avaliacao": "",
+      "notas": "Aguardando confirmação de horário."
+    },
+    {
+      "id": "4",
+      "pacienteID": 5,
+      "psicologoID": 1,
+      "data_hora": "2026-06-22T15:00",
+      "local": "Comodidade",
+      "status": "pendente",
+      "modalidade": "remoto",
+      "avaliacao": "",
+      "duracao": 2,
+      "notas": ""
+    },
+    {
+      "id": "5",
+      "pacienteID": 3,
+      "psicologoID": 1,
+      "data_hora": "2026-06-22T15:00",
+      "local": "Extensão",
+      "status": "cancelado",
+      "modalidade": "presencial",
+      "avaliacao": "",
+      "duracao": 2,
+      "notas": "Paciente remarcou para semana seguinte."
+    },
+    {
+      "id": "6",
+      "pacienteID": 3,
+      "psicologoID": 1,
+      "data_hora": "2026-05-14T10:00",
+      "local": "Clínica Central",
+      "status": "concluido",
+      "modalidade": "presencial",
+      "avaliacao": "",
+      "duracao": 2,
+      "notas": "Sessão concluída com sucesso."
+    },
+    {
+      "pacienteID": "3",
+      "psicologoID": 1,
+      "data_hora": "2026-06-30T08:00",
+      "local": "campus teste",
+      "status": "pendente",
+      "modalidade": "presencial",
+      "duracao": 1,
+      "avaliacao": "",
+      "notas": "",
+      "id": "RjYeN111OE8"
+    },
+    {
+      "pacienteID": "3",
+      "psicologoID": 1,
+      "data_hora": "2026-06-30T08:00",
+      "local": "teste teste",
+      "status": "pendente",
+      "modalidade": "remoto",
+      "duracao": 1,
+      "avaliacao": "",
+      "notas": "",
+      "id": "sy8C4upsXNE"
+    }
+  ],
+  "Postagens": [
+    {
+      "id": "0",
+      "tipoPostagem": "dicas",
+      "titulo": "Postagem 1",
+      "descricao": "esse texto e a descricao da dica",
+      "categoria": "",
+      "prioridade": "alta",
+      "imagem": "",
+      "idPsicologo": ""
+    },
+    {
+      "id": "1",
+      "tipoPostagem": "apoio",
+      "titulo": "Postagem de apoio",
+      "mensagem": "esse texto e a mensagem de apoio",
+      "categoriaId": "",
+      "data": "new Date()",
+      "idPsicologo": ""
+    }
+  ],
+  "Especializacoes": [
+    {
+      "id": "1",
+      "area": "escolar"
+    },
+    {
+      "id": "2",
+      "area": "geral"
+    },
+    {
+      "id": "3",
+      "area": "emocional"
+    },
+    {
+      "id": "4",
+      "area": "infanto-juvenil"
+    }
+  ],
+  "Quadros": [
+    {
+      "id": "1",
+      "area": "aprendizado"
+    },
+    {
+      "id": "2",
+      "area": "geral"
+    },
+    {
+      "id": "3",
+      "area": "saude-mental"
+    },
+    {
+      "id": "4",
+      "area": "infanto-juvenil"
+    }
+  ],
+  "humor": [
+    {
+      "id": "1",
+      "sentimento": "Feliz"
+    },
+    {
+      "id": "2",
+      "sentimento": "Triste"
+    },
+    {
+      "id": "3",
+      "sentimento": "Ansioso"
+    },
+    {
+      "id": "4",
+      "sentimento": "Raiva"
+    },
+    {
+      "id": "5",
+      "sentimento": "Exausto"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
