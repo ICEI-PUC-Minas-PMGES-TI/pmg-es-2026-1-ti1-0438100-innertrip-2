@@ -1,7 +1,3 @@
-// ══════════════════════════════════════════════════════════════
-//  PSYCHE – Módulo de Cadastro (Paciente & Psicólogo/Estagiário)
-//  Integra com JSON Server via API REST em /usuarios
-// ══════════════════════════════════════════════════════════════
 
 const API_URL = '/usuarios';
 

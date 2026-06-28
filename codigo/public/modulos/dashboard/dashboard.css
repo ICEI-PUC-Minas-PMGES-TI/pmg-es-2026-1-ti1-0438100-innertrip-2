@@ -40,7 +40,7 @@ body {
   background: var(--black);
   display: flex;
   flex-direction: column;
-  height: 150vh;
+  
   transition: transform .25s ease;
 }
 
@@ -280,4 +280,8 @@ article{
 
 .avatarAval{
   margin-right: 20px;
+}
+
+#pacientesTitle{
+  margin: 20px 30px;
 }
