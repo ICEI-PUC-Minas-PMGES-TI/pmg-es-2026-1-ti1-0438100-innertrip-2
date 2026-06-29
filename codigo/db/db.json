@@ -208,6 +208,28 @@
       },
       "id_quadro": "2",
       "id": "jhdxmEzVRxw"
+    },
+    {
+      "login": "Lucca",
+      "senha": "123456",
+      "tipoUsuario": "paciente",
+      "nome": "Lucca",
+      "sobrenome": "Xavier",
+      "nascimento": "2006-07-19",
+      "cpf": "109.766.186-56",
+      "enderecoResidencial": {
+        "logradouro": "Rua Tereza",
+        "tipoLogradouro": "casa",
+        "cep": "12312-312"
+      },
+      "contato": {
+        "email": "teste@gmail.com",
+        "telefone": "(31) 91234-1234",
+        "instagran": "@lucca",
+        "linkedin": "@lucca"
+      },
+      "id_quadro": "2",
+      "id": "MbWGnP6nVVQ"
     }
   ],
   "consultas": [
@@ -260,28 +282,15 @@
       "notas": ""
     },
     {
-      "id": "5",
-      "pacienteID": 3,
-      "psicologoID": 1,
-      "data_hora": "2026-06-22T15:00",
-      "local": "Extensão",
-      "status": "cancelado",
-      "modalidade": "presencial",
-      "avaliacao": "",
-      "duracao": 2,
-      "notas": "Paciente remarcou para semana seguinte."
-    },
-    {
-      "id": "6",
-      "pacienteID": 3,
-      "psicologoID": 1,
+      "pacienteID": "3",
+      "psicologoID": "1",
       "data_hora": "2026-05-14T10:00",
       "local": "Clínica Central",
-      "status": "concluido",
+      "status": "pendente",
       "modalidade": "presencial",
       "avaliacao": "",
-      "duracao": 2,
-      "notas": "Sessão concluída com sucesso."
+      "notas": "Sessao ainda vai acontecer",
+      "id": "6"
     },
     {
       "pacienteID": "3",
@@ -294,6 +303,18 @@
       "avaliacao": "",
       "notas": "",
       "id": "RjYeN111OE8"
+    },
+    {
+      "pacienteID": "3",
+      "psicologoID": 2,
+      "data_hora": "2026-06-29T08:00",
+      "local": "Local Video",
+      "status": "pendente",
+      "modalidade": "presencial",
+      "duracao": 1,
+      "avaliacao": "",
+      "notas": "",
+      "id": "7gINyoLcxk0"
     }
   ],
   "Postagens": [

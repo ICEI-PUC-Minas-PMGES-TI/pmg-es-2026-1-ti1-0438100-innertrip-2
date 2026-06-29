@@ -175,9 +175,7 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
 | --------------------------- | ---------- | -------------------------------------------------- |
-| Processo de Design Thinking      | Miro       | https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️        |
 | Repositório de código            | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0438100-innertrip-2      |
-| Hospedagem do site               | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
 | Protótipo Interativo / Wireframe | Figma      | https://www.figma.com/design/GXOGd5YW7pbgMaM1gm4hhd/Psyche?node-id=0-1&p=f&t=wL6hCwPEcL7zmgoz-0 |
 
 
@@ -203,13 +201,7 @@ Esta seção apresenta todos os detalhes da solução criada no projeto.
 
 O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️
 
-[![Vídeo do projeto](images/video.png)](https://www.youtube.com/watch?v=EAkCcZyPmZ0)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O video de apresentação é voltado para que o público externo possa conhecer a solução. O formato é livre, sendo importante que seja apresentado o problema e a solução numa linguagem descomplicada e direta.
->
-> Inclua um link para o vídeo do projeto.
+![Vídeo do projeto](https://www.youtube.com/watch?v=EAkCcZyPmZ0)
 
 ## Funcionalidades
 
@@ -226,13 +218,13 @@ Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
   * Em seguida, escolha a opção Contatos
 * **Tela da funcionalidade**:
 
-> ![Dashbord](docs/images/WhatsApp Image 2026-06-28 at 8.31.08 PM.jpeg)
-![Lista_de_consultas: pemite o usuário a consultar suas consultas](docs/images/WhatsApp Image 2026-06-28 at 8.31.34 PM.jpeg)
-![Encontrar_psicólogos: permite o usuário a encontrat psicólogos cadastrados na plataforma](docs/images/WhatsApp Image 2026-06-28 at 8.32.23 PM.jpeg)
-![Agendar_consultas: Permite o usuário a agendar consultas](docs/images/WhatsApp Image 2026-06-28 at 8.32.47 PM.jpeg)
-![Tela_de_login: Serve para fazer login em sua conta no spyche](docs/images/WhatsApp Image 2026-06-28 at 8.33.03 PM.jpeg)
-![Cirar_conta_psyche: Serve para criar conta na plataforma](docs/images/WhatsApp Image 2026-06-28 at 8.33.13 PM.jpeg)
-![Dashbord](docs/images/WhatsApp Image 2026-06-28 at 8.33.47 PM.jpeg)
+> ![Dashbord](images/dashboardpaciente.jpeg)
+![Lista_de_consultas:pemiteousuárioaconsultarsuasconsultas](images/ListaConsultas.jpeg)
+![Encontrar_psicólogos](images/encontrarPsicologos.jpeg)
+![Agendar_consultas](images/agendar.jpeg)
+![Tela_de_login](images/login.jpeg)
+![Cirar_conta_psyche](images/signin.jpeg)
+![Dashbord](images/dashboardpsicologo.jpeg)
 
 
 ## Estruturas de Dados

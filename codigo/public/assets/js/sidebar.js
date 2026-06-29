@@ -3,19 +3,16 @@
   /* ── Mapa de links por tipoUsuario ── */
   const NAV_PSICOLOGO = [
     { label: 'Dashboard',      href: '/modulos/dashboard/dashboard.html',                icon: 'grid'       },
-    { label: 'Meus Pacientes', href: '/modulos/cadastro_pacientes/index.html',           icon: 'person'     },
     { label: 'Consultas',      href: '/modulos/consultas/index.html',                    icon: 'file-text'  },
   ];
 
   const NAV_ESTUDANTE = [
     { label: 'Dashboard',      href: '/modulos/dashboard/dashboard.html',                icon: 'grid'       },
-    { label: 'Meus Pacientes', href: '/modulos/cadastro_pacientes/index.html',           icon: 'person'     },
     { label: 'Consultas',      href: '/modulos/consultas/index.html',                    icon: 'file-text'  },
   ];
 
   const NAV_PACIENTE = [
     { label: 'Dashboard',      href: '/modulos/dashboardPaciente/dashboardPaciente.html', icon: 'grid'      },
-    { label: 'Consultas',      href: '/modulos/consultas/index.html',                     icon: 'file-text' },
     { label: 'Psicólogos',     href: '/modulos/EncontrarPsicologos/psicologos.html',      icon: 'search'    },
     { label: 'Agendamentos',   href: '/modulos/agendamento_de_consultas/index.html',      icon: 'calendar'   },
   ];

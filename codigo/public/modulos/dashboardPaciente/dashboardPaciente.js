@@ -116,9 +116,9 @@ function atualizarSmallCardsPaciente(usuarios, consultas, usuarioCompleto) {
   let contConsultas = 0;
   let tempoConsultas = 0
   for (let i = 0; i < consultas.length; i++) {
-    if (usuarioCompleto.id == consultas[i].pacienteID) {
+    if (String(usuarioCompleto.id) == String(consultas[i].pacienteID)) {
       contConsultas += 1;
-      tempoConsultas += consultas[i].duracao;
+      tempoConsultas += consultas[i].duracao ?? 0;
     }
   }
   if (cardsTitle[0]) cardsTitle[0].textContent = contConsultas;
